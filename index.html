@@ -44,7 +44,6 @@
         .nav-links a { color: var(--slate); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.3s; }
         .nav-links a:hover { color: var(--white); }
 
-        /* Hero with headshot on right */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -53,26 +52,22 @@
             position: relative;
             overflow: hidden;
         }
-
         .hero::before {
             content: '';
             position: absolute;
             top: 0; right: 0;
-            width: 50%;
-            height: 100%;
+            width: 50%; height: 100%;
             background: url('https://images.unsplash.com/photo-1644088379091-d574269d422f?w=1920&q=80') center/cover no-repeat;
             opacity: 0.25;
             mask-image: linear-gradient(to left, rgba(0,0,0,0.5) 0%, transparent 70%);
             -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.5) 0%, transparent 70%);
         }
-
         .hero .container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
         }
-
         .hero-content { position: relative; z-index: 1; }
         .hero-label {
             display: inline-block; color: var(--blue);
@@ -106,7 +101,6 @@
         .cta-button:hover { background: var(--blue-light); transform: translateY(-2px); }
         .cta-button svg { width: 20px; height: 20px; }
 
-        /* Headshot styling */
         .hero-image {
             position: relative;
             z-index: 1;
@@ -137,7 +131,6 @@
             filter: grayscale(10%);
         }
 
-        /* Turnaround Story */
         .turnaround { background: var(--navy-light); padding: 5rem 0; }
         .turnaround-content { 
             display: grid; 
@@ -173,14 +166,13 @@
             position: relative;
         }
         .turnaround-box li::before {
-            content: '→';
+            content: '';
             position: absolute;
             left: 0;
             color: var(--blue);
         }
         .turnaround-box p { color: var(--slate); font-size: 0.95rem; line-height: 1.7; }
 
-        /* About */
         .about { padding: 6rem 0; border-top: 1px solid rgba(148, 163, 184, 0.1); }
         .about-content { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: start; }
         .about-text p { color: var(--slate); margin-bottom: 1.5rem; font-size: 1.05rem; }
@@ -189,7 +181,6 @@
         .credential-number { font-family: 'Cormorant Garamond', serif; font-size: 2.25rem; font-weight: 600; color: var(--blue); line-height: 1; }
         .credential-text { color: var(--slate); font-size: 0.85rem; margin-top: 0.5rem; }
 
-        /* AI Credentials */
         .ai-credentials { background: var(--navy-light); padding: 6rem 0; }
         .ai-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 3rem; }
         .ai-card { padding: 2rem; background: var(--navy); border-radius: 8px; border: 1px solid rgba(59, 130, 246, 0.15); }
@@ -202,7 +193,52 @@
         }
         .ai-card p { color: var(--slate); font-size: 0.95rem; }
 
-        /* Services */
+        .testimonials { padding: 6rem 0; }
+        .testimonials-container { max-width: 800px; margin: 0 auto; text-align: center; }
+        .testimonial-slider { position: relative; min-height: 280px; margin-top: 3rem; }
+        .testimonial {
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            padding: 2rem;
+        }
+        .testimonial.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .testimonial-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-style: italic;
+            line-height: 1.6;
+            color: var(--white);
+            margin-bottom: 2rem;
+        }
+        .testimonial-quote::before { content: '"'; color: var(--blue); }
+        .testimonial-quote::after { content: '"'; color: var(--blue); }
+        .testimonial-author { color: var(--blue); font-weight: 600; font-size: 1rem; }
+        .testimonial-role { color: var(--slate); font-size: 0.9rem; margin-top: 0.25rem; }
+        .testimonial-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 2rem;
+        }
+        .testimonial-dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: var(--slate);
+            opacity: 0.3;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+        }
+        .testimonial-dot.active { opacity: 1; background: var(--blue); }
+        .testimonial-dot:hover { opacity: 0.7; }
+
         .services { padding: 6rem 0; }
         .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
         .service-card { padding: 2.5rem; background: var(--navy-light); border-radius: 8px; border: 1px solid rgba(148, 163, 184, 0.1); transition: all 0.3s; }
@@ -212,7 +248,6 @@
         .service-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 500; margin-bottom: 1rem; }
         .service-card p { color: var(--slate); font-size: 0.95rem; }
 
-        /* Expertise */
         .expertise { background: var(--navy-light); padding: 6rem 0; position: relative; overflow: hidden; }
         .expertise::before {
             content: '';
@@ -229,7 +264,6 @@
         .expertise-column ul { list-style: none; }
         .expertise-column li { color: var(--slate); font-size: 0.95rem; margin-bottom: 0.6rem; }
 
-        /* Contact */
         .contact { padding: 6rem 0; text-align: center; }
         .contact-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap; }
         .contact-link { display: inline-flex; align-items: center; gap: 0.75rem; color: var(--slate); text-decoration: none; font-size: 1rem; padding: 1rem 2rem; border: 1px solid rgba(148, 163, 184, 0.2); border-radius: 8px; transition: all 0.3s; }
@@ -263,7 +297,7 @@
 <body>
     <nav>
         <div class="container">
-            <a href="#" class="logo">Simon Gadd — Stratus Systems Ltd</a>
+            <a href="#" class="logo">Simon Gadd &#8212; Stratus Systems Ltd</a>
             <ul class="nav-links">
                 <li><a href="#turnaround">Track Record</a></li>
                 <li><a href="#about">About</a></li>
@@ -279,7 +313,7 @@
             <div class="hero-content">
                 <span class="hero-label">Technology Leadership</span>
                 <h1>I lead technology organisations through transformation</h1>
-                <p>20+ years converting telco complexity into commercial results — from early-stage startup through scale-up to successful exit. Whether you're looking for a permanent technology leader or strategic support through a critical transition, I deliver when it matters.</p>
+                <p>20+ years converting telco complexity into commercial results &#8212; from early-stage startup through scale-up to successful exit. Whether you're looking for a permanent technology leader or strategic support through a critical transition, I deliver when it matters.</p>
                 <div class="hero-tags">
                     <span class="hero-tag">SC Clearable</span>
                     <span class="hero-tag">UK/Swiss National</span>
@@ -305,13 +339,13 @@
             <div class="turnaround-content">
                 <div class="turnaround-intro">
                     <span class="section-label">Recent Example</span>
-                    <h2 class="section-title">IoT platform turnaround — 6 months</h2>
+                    <h2 class="section-title">IoT platform turnaround &#8212; 6 months</h2>
                     <p style="color: var(--slate); max-width: 700px;">Took over as MD of a struggling IoT connectivity platform serving a major UK mobile operator. The platform was missing SLAs, the customer relationship was fractured, and contract renewal was at risk.</p>
                 </div>
                 <div class="turnaround-box inherited">
                     <h3>Inherited</h3>
                     <ul>
-                        <li>Platform in crisis — missing SLAs</li>
+                        <li>Platform in crisis &#8212; missing SLAs</li>
                         <li>Customer relationship fractured</li>
                         <li>Contract renewal at risk</li>
                     </ul>
@@ -338,10 +372,10 @@
                 <div class="about-text">
                     <span class="section-label">About</span>
                     <h2 class="section-title">Startup to scale-up to exit</h2>
-                    <p>I've lived the full company lifecycle. Early in my career, I joined a telecoms startup as one of the first technical hires and helped build it through rapid growth to eventual acquisition — giving me first-hand experience of sell-side preparation and what acquirers look for.</p>
+                    <p>I've lived the full company lifecycle. Early in my career, I joined a telecoms startup as one of the first technical hires and helped build it through rapid growth to eventual acquisition &#8212; giving me first-hand experience of sell-side preparation and what acquirers look for.</p>
                     <p>At Nextgen, I joined as employee #2 and helped scale it from 3 to 200+ staff across multiple countries. Built the Mobile Roaming Financial Clearing and IOT Discount Management platforms from a blank sheet. Central to securing Tier-1 MNO clients globally.</p>
-                    <p>Most recently as Managing Director of Nextgen SIMplify, I had full P&L ownership, defined the 3-year strategy, and integrated AI-driven analytics with eSIM/5G-SA support. I present quarterly to boards and work fluently with investor-style forecasting and governance.</p>
-                    <p>I also spent 4 years on MoD contracts (SC Cleared), building Oracle APEX systems for defence — giving me deep understanding of government hosting, engineering standards, and orchestration requirements.</p>
+                    <p>Most recently as Managing Director of Nextgen SIMplify, I had full P&amp;L ownership, defined the 3-year strategy, and integrated AI-driven analytics with eSIM/5G-SA support. I present quarterly to boards and work fluently with investor-style forecasting and governance.</p>
+                    <p>I also spent 4 years on MoD contracts (SC Cleared), building Oracle APEX systems for defence &#8212; giving me deep understanding of government hosting, engineering standards, and orchestration requirements.</p>
                     <p>I'm equally comfortable as a hands-on technology leader in a permanent role or providing strategic support through advisory and interim engagements.</p>
                 </div>
                 <div class="credentials">
@@ -350,7 +384,7 @@
                         <div class="credential-text">Years in technology leadership</div>
                     </div>
                     <div class="credential">
-                        <div class="credential-number">3→200+</div>
+                        <div class="credential-number">3&#8594;200+</div>
                         <div class="credential-text">Staff growth at Nextgen</div>
                     </div>
                     <div class="credential">
@@ -368,16 +402,16 @@
 
     <section class="ai-credentials">
         <div class="container">
-            <span class="section-label">AI & Transformation</span>
-            <h2 class="section-title">Building production AI — not PowerPoint</h2>
+            <span class="section-label">AI &amp; Transformation</span>
+            <h2 class="section-title">Building production AI &#8212; not PowerPoint</h2>
             <div class="ai-grid">
                 <div class="ai-card">
                     <h3>Agentic AI for Telcos</h3>
-                    <p>Building production PoC systems that autonomously execute business processes — call centre optimisation, billing dispute resolution, customer journey automation. Working systems, not vapourware.</p>
+                    <p>Building production PoC systems that autonomously execute business processes &#8212; call centre optimisation, billing dispute resolution, customer journey automation. Working systems, not vapourware.</p>
                 </div>
                 <div class="ai-card">
                     <h3>Decision AI Expertise</h3>
-                    <p>Deep understanding of AI systems that provide auditable, explainable recommendations for complex commercial decisions — traffic steering, pricing optimisation, risk assessment.</p>
+                    <p>Deep understanding of AI systems that provide auditable, explainable recommendations for complex commercial decisions &#8212; traffic steering, pricing optimisation, risk assessment.</p>
                 </div>
                 <div class="ai-card">
                     <h3>AI-Driven Analytics Platform</h3>
@@ -385,7 +419,44 @@
                 </div>
                 <div class="ai-card">
                     <h3>API-First Platform Design</h3>
-                    <p>Led architecture of IoT CMP with full programmatic control — the foundation for AI/ML integration and autonomous operations.</p>
+                    <p>Led architecture of IoT CMP with full programmatic control &#8212; the foundation for AI/ML integration and autonomous operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="testimonials-container">
+                <span class="section-label">What People Say</span>
+                <h2 class="section-title">Recommendations</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial active">
+                        <p class="testimonial-quote">Simon was a key member of the leadership team &#8212; able to support the core business, as well as autonomously drive his own division. His views were always listened to as commercial and strategic. Simon would be a very valuable member of any senior leadership team.</p>
+                        <p class="testimonial-author">Nicholas Hoare</p>
+                        <p class="testimonial-role">CEO, Nextgen Clearing</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-quote">A rare combination of deep technical understanding and genuine commercial expertise. Equally comfortable in the boardroom discussing long-term strategy as he is getting into the detail to solve a customer's immediate challenges. Someone of real integrity who colleagues trust.</p>
+                        <p class="testimonial-author">Georg Kaiser</p>
+                        <p class="testimonial-role">Regional Sales Director, Nextgen Clearing</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-quote">A unique blend of excellent relationship management, technical depth and business acumen. A rare combination of skills. He brings a level of enthusiasm and commitment that is refreshing in a business partner.</p>
+                        <p class="testimonial-author">Bryan Burns</p>
+                        <p class="testimonial-role">Transaction Network Services</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-quote">He instantly builds rapport and quickly establishes himself as a trusted advisor. His ability to turn a business problem into an effective solution is a critical factor in not just gaining trust with clients but also winning business. I would work with Simon again in a heartbeat.</p>
+                        <p class="testimonial-author">Jill Paterson</p>
+                        <p class="testimonial-role">Global Sales Professional</p>
+                    </div>
+                </div>
+                <div class="testimonial-dots">
+                    <button class="testimonial-dot active" data-index="0" aria-label="Testimonial 1"></button>
+                    <button class="testimonial-dot" data-index="1" aria-label="Testimonial 2"></button>
+                    <button class="testimonial-dot" data-index="2" aria-label="Testimonial 3"></button>
+                    <button class="testimonial-dot" data-index="3" aria-label="Testimonial 4"></button>
                 </div>
             </div>
         </div>
@@ -411,8 +482,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                         </svg>
                     </div>
-                    <h3>Interim & Fractional</h3>
-                    <p>CTO, MD, or CPO roles on an interim or fractional basis. Hands-on leadership for turnarounds, scale-ups, or bridge periods. Full P&L capability.</p>
+                    <h3>Interim &amp; Fractional</h3>
+                    <p>CTO, MD, or CPO roles on an interim or fractional basis. Hands-on leadership for turnarounds, scale-ups, or bridge periods. Full P&amp;L capability.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -434,7 +505,7 @@
                 <h2 class="section-title">Deep experience across the stack</h2>
                 <div class="expertise-grid">
                     <div class="expertise-column">
-                        <h4>AI & Data</h4>
+                        <h4>AI &amp; Data</h4>
                         <ul>
                             <li>Agentic AI Systems</li>
                             <li>Decision AI / ML Ops</li>
@@ -454,10 +525,10 @@
                     <div class="expertise-column">
                         <h4>Leadership</h4>
                         <ul>
-                            <li>P&L Ownership</li>
-                            <li>Scale-up (3→200+)</li>
+                            <li>P&amp;L Ownership</li>
+                            <li>Scale-up (3&#8594;200+)</li>
                             <li>Tier-1 Deal Closing</li>
-                            <li>Board & Investor Comms</li>
+                            <li>Board &amp; Investor Comms</li>
                         </ul>
                     </div>
                 </div>
@@ -469,13 +540,13 @@
         <div class="container">
             <span class="section-label">Contact</span>
             <h2 class="section-title">Let's talk</h2>
-            <p style="color: var(--slate); max-width: 540px; margin: 0 auto;">Whether you're looking for a permanent technology leader, need someone to navigate a critical transition, or want strategic advice — I'd welcome a conversation.</p>
+            <p style="color: var(--slate); max-width: 540px; margin: 0 auto;">Whether you're looking for a permanent technology leader, need someone to navigate a critical transition, or want strategic advice &#8212; I'd welcome a conversation.</p>
             <div class="contact-links">
-                <a href="mailto:simon@stratussystems.biz" class="contact-link primary">
+                <a href="mailto:simon&#64;stratussystems.biz" class="contact-link primary">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    simon@stratussystems.biz
+                    simon&#64;stratussystems.biz
                 </a>
                 <a href="https://www.linkedin.com/in/simon-gadd" target="_blank" class="contact-link">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
@@ -494,3 +565,55 @@
     </section>
 
     <footer>
+        <div class="container">
+            <p>&#169; 2026 Stratus Systems Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            const testimonials = document.querySelectorAll('.testimonial');
+            const dots = document.querySelectorAll('.testimonial-dot');
+            let currentIndex = 0;
+            let intervalId;
+
+            function showTestimonial(index) {
+                testimonials.forEach(function(t, i) {
+                    if (i === index) {
+                        t.classList.add('active');
+                    } else {
+                        t.classList.remove('active');
+                    }
+                });
+                dots.forEach(function(d, i) {
+                    if (i === index) {
+                        d.classList.add('active');
+                    } else {
+                        d.classList.remove('active');
+                    }
+                });
+                currentIndex = index;
+            }
+
+            function nextTestimonial() {
+                var next = (currentIndex + 1) % testimonials.length;
+                showTestimonial(next);
+            }
+
+            function startAutoAdvance() {
+                intervalId = setInterval(nextTestimonial, 6000);
+            }
+
+            dots.forEach(function(dot) {
+                dot.addEventListener('click', function() {
+                    clearInterval(intervalId);
+                    showTestimonial(parseInt(dot.getAttribute('data-index')));
+                    startAutoAdvance();
+                });
+            });
+
+            startAutoAdvance();
+        })();
+    </script>
+</body>
+</html>
