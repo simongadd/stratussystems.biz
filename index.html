@@ -3,708 +3,497 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stratus Systems | Simon Gadd</title>
+    <meta name="description" content="Simon Gadd — Transformation leader who delivers. 20+ years scaling telco and IoT businesses. Interim CTO, fractional executive, AI-driven platform strategy, and IT due diligence for PE/VC.">
+    <title>Stratus Systems | Simon Gadd — Technology Leadership & Transformation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --deep-navy: #0a1628;
-            --slate: #1e293b;
-            --steel: #475569;
-            --silver: #94a3b8;
-            --pearl: #e2e8f0;
-            --white: #ffffff;
-            --accent: #3b82f6;
-            --accent-soft: rgba(59, 130, 246, 0.1);
+            --navy: #0a1628;
+            --navy-light: #0f1f35;
+            --blue: #3b82f6;
+            --blue-light: #60a5fa;
+            --slate: #94a3b8;
+            --white: #f8fafc;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'DM Sans', sans-serif;
-            background: var(--deep-navy);
-            color: var(--pearl);
-            line-height: 1.7;
-            font-size: 16px;
-            overflow-x: hidden;
+            background: var(--navy);
+            color: var(--white);
+            line-height: 1.6;
         }
 
-        /* Subtle grain texture overlay */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-            opacity: 0.02;
-            pointer-events: none;
-            z-index: 1000;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            padding: 1.5rem 4rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-            background: linear-gradient(to bottom, var(--deep-navy) 0%, transparent 100%);
+        nav {
+            position: fixed; top: 0; left: 0; right: 0;
+            padding: 1.5rem 0; z-index: 100;
+            background: linear-gradient(to bottom, var(--navy) 0%, transparent 100%);
         }
-
+        nav .container { display: flex; justify-content: space-between; align-items: center; }
         .logo {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            color: var(--white);
+            font-size: 1.5rem; font-weight: 600;
+            color: var(--white); text-decoration: none;
         }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { color: var(--slate); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--white); }
 
-        nav a {
-            color: var(--silver);
-            text-decoration: none;
-            font-size: 0.875rem;
-            margin-left: 2.5rem;
-            transition: color 0.3s ease;
-            letter-spacing: 0.02em;
-        }
-
-        nav a:hover {
-            color: var(--white);
-        }
-
-        /* Hero Section */
+        /* Hero with headshot on right */
         .hero {
             min-height: 100vh;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 0 4rem;
+            align-items: center;
+            padding: 8rem 0 4rem;
             position: relative;
             overflow: hidden;
-        }
-
-        /* Hero background image placeholder */
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
-            opacity: 0.15;
-            background: linear-gradient(to left, transparent 0%, var(--deep-navy) 100%),
-                        url('IMAGE_PLACEHOLDER_HERO') center/cover no-repeat;
-            /* Replace IMAGE_PLACEHOLDER_HERO with your chosen image */
         }
 
         .hero::before {
             content: '';
             position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 80%;
-            height: 200%;
-            background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.03) 0%, transparent 60%);
-            pointer-events: none;
+            top: 0; right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1644088379091-d574269d422f?w=1920&q=80') center/cover no-repeat;
+            opacity: 0.25;
+            mask-image: linear-gradient(to left, rgba(0,0,0,0.5) 0%, transparent 70%);
+            -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.5) 0%, transparent 70%);
         }
 
-        .hero-content {
-            max-width: 800px;
-            position: relative;
-            z-index: 1;
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
         }
 
-        .hero-eyebrow {
-            font-size: 0.875rem;
-            color: var(--accent);
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
+        .hero-content { position: relative; z-index: 1; }
+        .hero-label {
+            display: inline-block; color: var(--blue);
+            font-size: 0.85rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.15em;
             margin-bottom: 1.5rem;
-            font-weight: 500;
         }
-
         .hero h1 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 400;
-            line-height: 1.2;
-            color: var(--white);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 500; line-height: 1.15;
             margin-bottom: 1.5rem;
         }
-
-        .hero h1 span {
-            color: var(--silver);
+        .hero p { font-size: 1.1rem; color: var(--slate); margin-bottom: 2rem; max-width: 500px; }
+        .hero-tags { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 2rem; }
+        .hero-tag { 
+            padding: 0.4rem 1rem; 
+            background: rgba(59, 130, 246, 0.1); 
+            border: 1px solid rgba(59, 130, 246, 0.3); 
+            border-radius: 100px; 
+            color: var(--blue-light); 
+            font-size: 0.8rem;
+            font-weight: 500;
         }
-
-        .hero-description {
-            font-size: 1.125rem;
-            color: var(--silver);
-            max-width: 600px;
-            margin-bottom: 2.5rem;
+        .cta-button {
+            display: inline-flex; align-items: center; gap: 0.75rem;
+            background: var(--blue); color: var(--white);
+            padding: 1rem 2rem; text-decoration: none;
+            font-weight: 500; border-radius: 4px; transition: all 0.3s;
         }
+        .cta-button:hover { background: var(--blue-light); transform: translateY(-2px); }
+        .cta-button svg { width: 20px; height: 20px; }
 
-        .hero-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--white);
-            text-decoration: none;
-            font-size: 0.9rem;
-            letter-spacing: 0.05em;
-            padding: 0.75rem 0;
-            border-bottom: 1px solid var(--steel);
-            transition: all 0.3s ease;
-        }
-
-        .hero-cta:hover {
-            border-color: var(--accent);
-            padding-left: 0.5rem;
-        }
-
-        .hero-cta svg {
-            width: 16px;
-            height: 16px;
-            transition: transform 0.3s ease;
-        }
-
-        .hero-cta:hover svg {
-            transform: translateX(4px);
-        }
-
-        /* Section styling */
-        section {
-            padding: 6rem 4rem;
+        /* Headshot styling */
+        .hero-image {
             position: relative;
-        }
-
-        .section-label {
-            font-size: 0.75rem;
-            color: var(--accent);
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            margin-bottom: 2rem;
-            font-weight: 500;
-        }
-
-        h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(1.75rem, 3vw, 2.25rem);
-            font-weight: 400;
-            color: var(--white);
-            margin-bottom: 1.5rem;
-        }
-
-        /* About Section */
-        .about {
-            background: linear-gradient(to bottom, var(--deep-navy) 0%, var(--slate) 100%);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            max-width: 1200px;
-        }
-
-        .about-text p {
-            color: var(--silver);
-            margin-bottom: 1.5rem;
-        }
-
-        .about-text p:first-of-type {
-            font-size: 1.125rem;
-            color: var(--pearl);
-        }
-
-        .credentials {
-            display: grid;
-            gap: 1.5rem;
-        }
-
-        .credential {
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 4px;
-        }
-
-        .credential-number {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            color: var(--accent);
-            margin-bottom: 0.25rem;
-        }
-
-        .credential-label {
-            font-size: 0.875rem;
-            color: var(--silver);
-        }
-
-        /* Services Section */
-        .services {
-            background: var(--slate);
-        }
-
-        .services-intro {
-            color: var(--silver);
-            max-width: 600px;
-            margin-bottom: 3rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            max-width: 1200px;
-        }
-
-        .service-card {
-            padding: 2rem;
-            background: rgba(10, 22, 40, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-4px);
-        }
-
-        .service-icon {
-            width: 40px;
-            height: 40px;
-            margin-bottom: 1.25rem;
-            color: var(--accent);
-        }
-
-        .service-card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.25rem;
-            font-weight: 500;
-            color: var(--white);
-            margin-bottom: 0.75rem;
-        }
-
-        .service-card p {
-            font-size: 0.9rem;
-            color: var(--silver);
-        }
-
-        /* Expertise Section */
-        .expertise {
-            background: linear-gradient(to bottom, var(--slate) 0%, var(--deep-navy) 100%);
-        }
-
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            max-width: 1200px;
-            align-items: center;
-        }
-
-        .expertise-image {
-            width: 100%;
-            height: 400px;
-            background: url('IMAGE_PLACEHOLDER_EXPERTISE') center/cover no-repeat;
-            border-radius: 4px;
-            opacity: 0.8;
-            /* Replace IMAGE_PLACEHOLDER_EXPERTISE with your chosen image */
-        }
-
-        .expertise-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            margin-top: 1.5rem;
-        }
-
-        .expertise-tag {
-            padding: 0.5rem 1rem;
-            background: rgba(59, 130, 246, 0.08);
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            border-radius: 2px;
-            font-size: 0.875rem;
-            color: var(--pearl);
-        }
-
-        /* Track Record Section */
-        .track-record {
-            background: var(--deep-navy);
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .track-record-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            max-width: 1000px;
-            text-align: center;
-        }
-
-        .track-item {
-            padding: 1.5rem;
-        }
-
-        .track-number {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.5rem;
-            color: var(--white);
-            margin-bottom: 0.5rem;
-        }
-
-        .track-label {
-            font-size: 0.85rem;
-            color: var(--silver);
-            line-height: 1.4;
-        }
-
-        /* Contact Section */
-        .contact {
-            background: var(--deep-navy);
-            text-align: center;
-            padding: 8rem 4rem;
-        }
-
-        .contact h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 1rem;
-        }
-
-        .contact-description {
-            color: var(--silver);
-            max-width: 500px;
-            margin: 0 auto 2.5rem;
-        }
-
-        .contact-links {
+            z-index: 1;
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-link {
-            display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            color: var(--pearl);
-            text-decoration: none;
-            font-size: 0.95rem;
-            padding: 0.75rem 1.5rem;
-            border: 1px solid var(--steel);
-            border-radius: 2px;
-            transition: all 0.3s ease;
+        }
+        .headshot-wrapper {
+            position: relative;
+            width: 340px;
+            height: 420px;
+        }
+        .headshot-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 12px; left: 12px;
+            width: 100%; height: 100%;
+            border: 2px solid var(--blue);
+            opacity: 0.4;
+        }
+        .headshot {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            position: relative;
+            z-index: 1;
+            filter: grayscale(10%);
         }
 
-        .contact-link:hover {
-            border-color: var(--accent);
-            background: var(--accent-soft);
+        /* Turnaround Story */
+        .turnaround { background: var(--navy-light); padding: 5rem 0; }
+        .turnaround-content { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr 1fr; 
+            gap: 3rem; 
+            align-items: start;
         }
-
-        .contact-link svg {
-            width: 18px;
-            height: 18px;
+        .turnaround-intro { grid-column: 1 / -1; margin-bottom: 1rem; }
+        .section-label { color: var(--blue); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem; }
+        .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 500; margin-bottom: 1rem; }
+        .turnaround-box {
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
         }
-
-        /* Footer */
-        footer {
-            padding: 2rem 4rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.8rem;
-            color: var(--steel);
+        .turnaround-box.inherited { background: rgba(239, 68, 68, 0.05); border-color: rgba(239, 68, 68, 0.2); }
+        .turnaround-box.delivered { background: rgba(34, 197, 94, 0.05); border-color: rgba(34, 197, 94, 0.2); }
+        .turnaround-box.context { background: var(--navy); }
+        .turnaround-box h3 { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: 1.3rem; 
+            font-weight: 500; 
+            margin-bottom: 1rem;
         }
-
-        footer a {
-            color: var(--silver);
-            text-decoration: none;
+        .turnaround-box.inherited h3 { color: #f87171; }
+        .turnaround-box.delivered h3 { color: #4ade80; }
+        .turnaround-box ul { list-style: none; }
+        .turnaround-box li { 
+            color: var(--slate); 
+            font-size: 0.95rem; 
+            margin-bottom: 0.75rem;
+            padding-left: 1.25rem;
+            position: relative;
         }
+        .turnaround-box li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--blue);
+        }
+        .turnaround-box p { color: var(--slate); font-size: 0.95rem; line-height: 1.7; }
 
-        footer a:hover {
+        /* About */
+        .about { padding: 6rem 0; border-top: 1px solid rgba(148, 163, 184, 0.1); }
+        .about-content { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: start; }
+        .about-text p { color: var(--slate); margin-bottom: 1.5rem; font-size: 1.05rem; }
+        .credentials { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .credential { padding: 1.5rem; background: var(--navy-light); border-radius: 8px; border: 1px solid rgba(59, 130, 246, 0.1); }
+        .credential-number { font-family: 'Cormorant Garamond', serif; font-size: 2.25rem; font-weight: 600; color: var(--blue); line-height: 1; }
+        .credential-text { color: var(--slate); font-size: 0.85rem; margin-top: 0.5rem; }
+
+        /* AI Credentials */
+        .ai-credentials { background: var(--navy-light); padding: 6rem 0; }
+        .ai-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 3rem; }
+        .ai-card { padding: 2rem; background: var(--navy); border-radius: 8px; border: 1px solid rgba(59, 130, 246, 0.15); }
+        .ai-card h3 { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: 1.35rem; 
+            font-weight: 500; 
+            margin-bottom: 0.75rem;
             color: var(--white);
         }
+        .ai-card p { color: var(--slate); font-size: 0.95rem; }
 
-        /* Responsive */
+        /* Services */
+        .services { padding: 6rem 0; }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+        .service-card { padding: 2.5rem; background: var(--navy-light); border-radius: 8px; border: 1px solid rgba(148, 163, 184, 0.1); transition: all 0.3s; }
+        .service-card:hover { border-color: var(--blue); transform: translateY(-4px); }
+        .service-icon { width: 48px; height: 48px; background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
+        .service-icon svg { width: 24px; height: 24px; color: var(--white); }
+        .service-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 500; margin-bottom: 1rem; }
+        .service-card p { color: var(--slate); font-size: 0.95rem; }
+
+        /* Expertise */
+        .expertise { background: var(--navy-light); padding: 6rem 0; position: relative; overflow: hidden; }
+        .expertise::before {
+            content: '';
+            position: absolute; top: 0; right: 0;
+            width: 50%; height: 100%;
+            background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80') center/cover no-repeat;
+            opacity: 0.25;
+            mask-image: linear-gradient(to left, rgba(0,0,0,0.4) 0%, transparent 70%);
+            -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.4) 0%, transparent 70%);
+        }
+        .expertise-content { position: relative; z-index: 1; }
+        .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem; }
+        .expertise-column h4 { color: var(--blue); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; }
+        .expertise-column ul { list-style: none; }
+        .expertise-column li { color: var(--slate); font-size: 0.95rem; margin-bottom: 0.6rem; }
+
+        /* Contact */
+        .contact { padding: 6rem 0; text-align: center; }
+        .contact-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap; }
+        .contact-link { display: inline-flex; align-items: center; gap: 0.75rem; color: var(--slate); text-decoration: none; font-size: 1rem; padding: 1rem 2rem; border: 1px solid rgba(148, 163, 184, 0.2); border-radius: 8px; transition: all 0.3s; }
+        .contact-link:hover { color: var(--white); border-color: var(--blue); background: rgba(59, 130, 246, 0.1); }
+        .contact-link svg { width: 20px; height: 20px; }
+        .contact-link.primary { background: var(--blue); border-color: var(--blue); color: var(--white); }
+        .contact-link.primary:hover { background: var(--blue-light); border-color: var(--blue-light); }
+
+        footer { padding: 2rem 0; border-top: 1px solid rgba(148, 163, 184, 0.1); text-align: center; }
+        footer p { color: var(--slate); font-size: 0.85rem; }
+
         @media (max-width: 968px) {
-            header {
-                padding: 1rem 2rem;
-            }
-
-            nav {
-                display: none;
-            }
-
-            section, .hero {
-                padding: 4rem 2rem;
-            }
-
-            .about-grid,
-            .expertise-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .track-record-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .expertise-image {
-                height: 250px;
-                order: -1;
-            }
-
-            footer {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-                padding: 2rem;
-            }
+            .hero .container { grid-template-columns: 1fr; text-align: center; }
+            .hero-content { order: 2; }
+            .hero-image { order: 1; margin-bottom: 2rem; }
+            .hero-tags { justify-content: center; }
+            .headshot-wrapper { width: 280px; height: 350px; }
+            .turnaround-content { grid-template-columns: 1fr; }
+            .about-content { grid-template-columns: 1fr; }
+            .ai-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr; }
+            .expertise-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
         }
-
-        @media (max-width: 600px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .credentials {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-links {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .track-record-grid {
-                grid-template-columns: 1fr;
-            }
+        @media (max-width: 640px) {
+            .credentials { grid-template-columns: 1fr; }
+            .contact-links { flex-direction: column; align-items: center; }
         }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-content > * {
-            animation: fadeInUp 0.6s ease-out forwards;
-            opacity: 0;
-        }
-
-        .hero-eyebrow { animation-delay: 0.1s; }
-        .hero h1 { animation-delay: 0.2s; }
-        .hero-description { animation-delay: 0.3s; }
-        .hero-cta { animation-delay: 0.4s; }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">Stratus Systems</div>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#expertise">Expertise</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Stratus Systems</a>
+            <ul class="nav-links">
+                <li><a href="#turnaround">Track Record</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
-            <p class="hero-eyebrow">Technology Leadership & Advisory</p>
-            <h1>Building and scaling <span>technology businesses</span></h1>
-            <p class="hero-description">
-                I'm Simon Gadd — a technology executive with 20+ years' experience building platforms, 
-                scaling international teams, and leading complex technology programmes across 
-                telecommunications, IoT, and connectivity sectors.
-            </p>
-            <a href="#contact" class="hero-cta">
-                Get in touch
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-            </a>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-label">Transformation Leadership</span>
+                <h1>I turn around failing technology businesses</h1>
+                <p>20+ years converting telco complexity into commercial results — from founding-team startup to £25m exit. Now building production AI solutions for telecommunications.</p>
+                <div class="hero-tags">
+                    <span class="hero-tag">SC Clearable</span>
+                    <span class="hero-tag">UK/Swiss National</span>
+                    <span class="hero-tag">Available Now</span>
+                </div>
+                <a href="#contact" class="cta-button">
+                    Let's talk
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </div>
+            <div class="hero-image">
+                <div class="headshot-wrapper">
+                    <img src="headshot.jpg" alt="Simon Gadd" class="headshot">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="turnaround" id="turnaround">
+        <div class="container">
+            <div class="turnaround-content">
+                <div class="turnaround-intro">
+                    <span class="section-label">The SIMplify Turnaround</span>
+                    <h2 class="section-title">Proof I deliver</h2>
+                </div>
+                <div class="turnaround-box inherited">
+                    <h3>Inherited</h3>
+                    <ul>
+                        <li>Platform in crisis — missing SLAs</li>
+                        <li>Customer relationship fractured</li>
+                        <li>Contract renewal at risk</li>
+                    </ul>
+                </div>
+                <div class="turnaround-box delivered">
+                    <h3>Delivered</h3>
+                    <ul>
+                        <li>Complete platform rebuild in 6 months</li>
+                        <li>New 3-year contract secured</li>
+                        <li>300K+ SIMs under management</li>
+                    </ul>
+                </div>
+                <div class="turnaround-box context">
+                    <h3>How</h3>
+                    <p>Led a 28-person distributed team (UK product, India engineering). Established incident management, SLAs, change control, and security compliance for a regulated telco environment.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="about" id="about">
-        <div class="about-grid">
-            <div class="about-text">
-                <p class="section-label">Background</p>
-                <h2>From start-up to scale-up</h2>
-                <p>
-                    I joined Nextgen as employee #2 and helped grow the company from 3 people to 200+ 
-                    staff across multiple countries. I served on the Board for nearly a decade, led 
-                    technical strategy, and was central to closing multi-million pound enterprise deals 
-                    with Tier-1 mobile operators worldwide.
-                </p>
-                <p>
-                    Most recently as Managing Director of Nextgen SIMplify, I built an API-first IoT 
-                    connectivity platform from the ground up — defining the vision, assembling the team, 
-                    and securing anchor contracts with UK mobile network operators.
-                </p>
-                <p>
-                    I combine hands-on technical credibility with board-level strategic thinking. 
-                    I bridge the gap between engineering teams and the boardroom.
-                </p>
-            </div>
-            <div class="credentials">
-                <div class="credential">
-                    <div class="credential-number">20+</div>
-                    <div class="credential-label">Years in technology leadership</div>
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <span class="section-label">About</span>
+                    <h2 class="section-title">From employee #2 to £25m exit</h2>
+                    <p>I joined Nextgen as employee #2 and helped scale it from 3 to 200+ staff across multiple countries. Built the Mobile Roaming Financial Clearing and IOT Discount Management platforms from a blank sheet. Central to securing Tier-1 MNO clients globally.</p>
+                    <p>Most recently as Managing Director of Nextgen SIMplify, I had full P&L ownership, defined the 3-year strategy, and integrated AI-driven analytics with eSIM/5G-SA support. I present quarterly to boards and work in investor-style forecasting.</p>
+                    <p>Before that, I spent 4 years on MoD contracts (SC Cleared), building Oracle APEX systems for defence — giving me deep understanding of government hosting, engineering standards, and orchestration requirements.</p>
                 </div>
-                <div class="credential">
-                    <div class="credential-number">3 → 200+</div>
-                    <div class="credential-label">Staff growth as Board Director</div>
-                </div>
-                <div class="credential">
-                    <div class="credential-number">Global</div>
-                    <div class="credential-label">Teams across UK, India & beyond</div>
-                </div>
-                <div class="credential">
-                    <div class="credential-number">SC</div>
-                    <div class="credential-label">Security clearance eligible</div>
+                <div class="credentials">
+                    <div class="credential">
+                        <div class="credential-number">20+</div>
+                        <div class="credential-text">Years in technology leadership</div>
+                    </div>
+                    <div class="credential">
+                        <div class="credential-number">3→200+</div>
+                        <div class="credential-text">Staff growth at Nextgen</div>
+                    </div>
+                    <div class="credential">
+                        <div class="credential-number">£25m</div>
+                        <div class="credential-text">Exit value</div>
+                    </div>
+                    <div class="credential">
+                        <div class="credential-number">SC</div>
+                        <div class="credential-text">Clearance eligible</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="track-record">
-        <div class="track-record-grid">
-            <div class="track-item">
-                <div class="track-number">£M+</div>
-                <div class="track-label">Enterprise deals closed with Tier-1 MNOs</div>
-            </div>
-            <div class="track-item">
-                <div class="track-number">35</div>
-                <div class="track-label">Person distributed team led as MD</div>
-            </div>
-            <div class="track-item">
-                <div class="track-number">300K+</div>
-                <div class="track-label">Managed SIMs on platform built</div>
-            </div>
-            <div class="track-item">
-                <div class="track-number">9</div>
-                <div class="track-label">Years as Board Director</div>
+    <section class="ai-credentials">
+        <div class="container">
+            <span class="section-label">AI & Transformation</span>
+            <h2 class="section-title">Building production AI — not PowerPoint</h2>
+            <div class="ai-grid">
+                <div class="ai-card">
+                    <h3>Agentic AI for Telcos</h3>
+                    <p>Building production PoC systems that autonomously execute business processes — call centre optimisation, billing dispute resolution, customer journey automation. Not vapourware.</p>
+                </div>
+                <div class="ai-card">
+                    <h3>Decision AI Expertise</h3>
+                    <p>Deep understanding of AI systems that provide auditable, explainable recommendations for complex commercial decisions — traffic steering, pricing optimisation, risk assessment.</p>
+                </div>
+                <div class="ai-card">
+                    <h3>AI-Driven Analytics Platform</h3>
+                    <p>Architected real-time data infrastructure (Apache Pinot, Superset) powering automated billing reconciliation and predictive analytics for 300K+ managed SIMs.</p>
+                </div>
+                <div class="ai-card">
+                    <h3>API-First Platform Design</h3>
+                    <p>Led architecture of IoT CMP with full programmatic control — the foundation for AI/ML integration and autonomous operations.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="services" id="services">
-        <p class="section-label">Services</p>
-        <h2>How I can help</h2>
-        <p class="services-intro">
-            I work with growth-stage companies, investors, and organisations navigating 
-            technology-driven change.
-        </p>
-        <div class="services-grid">
-            <div class="service-card">
-                <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-                <h3>Strategic Advisory</h3>
-                <p>Technology strategy, product roadmaps, and IT due diligence for growth-stage companies and PE/VC investors evaluating acquisitions.</p>
-            </div>
-            <div class="service-card">
-                <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-                <h3>Interim & Fractional Leadership</h3>
-                <p>CTO, MD, or technology director support for companies navigating growth, transformation, or leadership transitions.</p>
-            </div>
-            <div class="service-card">
-                <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-                <h3>Platform & Product Strategy</h3>
-                <p>Defining and building API-first platforms, connectivity solutions, and data-driven products — from vision through to delivery.</p>
+        <div class="container">
+            <span class="section-label">Services</span>
+            <h2 class="section-title">How I can help</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h3>Strategic Advisory</h3>
+                    <p>IT due diligence for PE/VC investments. Technology strategy and roadmap development. AI readiness assessment. Market positioning for telecoms and connectivity businesses.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3>Interim & Fractional Leadership</h3>
+                    <p>CTO, MD, or CPO roles on an interim or fractional basis. Hands-on leadership for turnarounds, scale-ups, or bridge periods. Full P&L capability.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <h3>Platform & AI Strategy</h3>
+                    <p>API-first platform design. Legacy system modernisation. Agentic AI implementation for operational efficiency. Real-time data infrastructure.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="expertise" id="expertise">
-        <div class="expertise-grid">
-            <div>
-                <p class="section-label">Domain Expertise</p>
-                <h2>Deep sector knowledge</h2>
-                <p style="color: var(--silver); margin-bottom: 1rem;">
-                    Two decades building technology businesses in telecommunications and connectivity 
-                    gives me pattern recognition that accelerates decision-making and reduces risk.
-                </p>
-                <div class="expertise-list">
-                    <span class="expertise-tag">Telecommunications</span>
-                    <span class="expertise-tag">IoT Connectivity</span>
-                    <span class="expertise-tag">4G / 5G</span>
-                    <span class="expertise-tag">eSIM / eUICC</span>
-                    <span class="expertise-tag">MNO / MVNO</span>
-                    <span class="expertise-tag">BSS / OSS</span>
-                    <span class="expertise-tag">Wholesale Roaming</span>
-                    <span class="expertise-tag">API Platforms</span>
-                    <span class="expertise-tag">Data Infrastructure</span>
-                    <span class="expertise-tag">Enterprise Sales</span>
-                    <span class="expertise-tag">Regulated Environments</span>
+        <div class="container">
+            <div class="expertise-content">
+                <span class="section-label">Domain Expertise</span>
+                <h2 class="section-title">Deep experience across the stack</h2>
+                <div class="expertise-grid">
+                    <div class="expertise-column">
+                        <h4>AI & Data</h4>
+                        <ul>
+                            <li>Agentic AI Systems</li>
+                            <li>Decision AI / ML Ops</li>
+                            <li>Real-time Analytics</li>
+                            <li>API-First Architecture</li>
+                        </ul>
+                    </div>
+                    <div class="expertise-column">
+                        <h4>Telco Domain</h4>
+                        <ul>
+                            <li>IoT / CMP Platforms</li>
+                            <li>BSS/OSS Systems</li>
+                            <li>Wholesale Roaming</li>
+                            <li>4G/5G/eSIM/eUICC</li>
+                        </ul>
+                    </div>
+                    <div class="expertise-column">
+                        <h4>Leadership</h4>
+                        <ul>
+                            <li>P&L Ownership</li>
+                            <li>Scale-up (3→200+)</li>
+                            <li>Tier-1 Deal Closing</li>
+                            <li>Board & Investor Comms</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="expertise-image"></div>
         </div>
     </section>
 
     <section class="contact" id="contact">
-        <p class="section-label">Contact</p>
-        <h2>Let's talk</h2>
-        <p class="contact-description">
-            Whether you're building something in telco or IoT, need experienced leadership 
-            for a growth phase, or want a sounding board for technology strategy — 
-            I'd welcome a conversation.
-        </p>
-        <div class="contact-links">
-            <a href="mailto:simon@stratussystems.biz" class="contact-link">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                simon@stratussystems.biz
-            </a>
-            <a href="https://www.linkedin.com/in/simon-gadd" target="_blank" rel="noopener" class="contact-link">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-                LinkedIn
-            </a>
+        <div class="container">
+            <span class="section-label">Contact</span>
+            <h2 class="section-title">Let's talk</h2>
+            <p style="color: var(--slate); max-width: 500px; margin: 0 auto;">Whether you need a turnaround leader, strategic advisor, or someone to build your AI capability — I'd welcome a conversation.</p>
+            <div class="contact-links">
+                <a href="mailto:simon@stratussystems.biz" class="contact-link primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    simon@stratussystems.biz
+                </a>
+                <a href="https://www.linkedin.com/in/simon-gadd" target="_blank" class="contact-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+                <a href="Simon_Gadd_CV.pdf" target="_blank" class="contact-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    Download CV
+                </a>
+            </div>
         </div>
     </section>
 
     <footer>
-        <div>© 2025 Stratus Systems Ltd. Based in Hertfordshire, UK.</div>
-        <div>Dual UK/Swiss national · Available remotely or on-site</div>
+        <div class="container">
+            <p>&copy; 2025 Stratus Systems. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
