@@ -36,9 +36,11 @@
         }
         nav .container { display: flex; justify-content: space-between; align-items: center; }
         .logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.4rem; font-weight: 600;
-            color: var(--white); text-decoration: none;
+            text-decoration: none;
+        }
+        .logo-img {
+            height: 40px;
+            width: auto;
         }
         .nav-links { display: flex; gap: 2.5rem; list-style: none; }
         .nav-links a { color: var(--slate); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.3s; }
@@ -297,7 +299,7 @@
 <body>
     <nav>
         <div class="container">
-            <a href="#" class="logo">Simon Gadd &#8212; Stratus Systems Ltd</a>
+            <a href="#" class="logo"><img src="stratus-logo-dark.png" alt="Stratus Systems" class="logo-img"></a>
             <ul class="nav-links">
                 <li><a href="#turnaround">Track Record</a></li>
                 <li><a href="#about">About</a></li>
@@ -542,7 +544,7 @@
             <h2 class="section-title">Let's talk</h2>
             <p style="color: var(--slate); max-width: 540px; margin: 0 auto;">Whether you're looking for a permanent technology leader, need someone to navigate a critical transition, or want strategic advice &#8212; I'd welcome a conversation.</p>
             <div class="contact-links">
-                <a href="mailto:simon&#64;stratussystems.biz" class="contact-link primary">
+                <a href="/cdn-cgi/l/email-protection#c4b7ada9abaae2e7f2f0ffb7b0b6a5b0b1b7b7bdb7b0a1a9b7eaa6adbe" class="contact-link primary">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
@@ -570,7 +572,7 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         (function() {
             const testimonials = document.querySelectorAll('.testimonial');
             const dots = document.querySelectorAll('.testimonial-dot');
@@ -607,13 +609,4 @@
             dots.forEach(function(dot) {
                 dot.addEventListener('click', function() {
                     clearInterval(intervalId);
-                    showTestimonial(parseInt(dot.getAttribute('data-index')));
-                    startAutoAdvance();
-                });
-            });
-
-            startAutoAdvance();
-        })();
-    </script>
-</body>
-</html>
+                    showTestimonial(parseInt(dot.getAttribute('data-index
