@@ -39,7 +39,7 @@
             text-decoration: none;
         }
         .logo-img {
-            height: 40px;
+            height: 56px;
             width: auto;
         }
         .nav-links { display: flex; gap: 2.5rem; list-style: none; }
@@ -544,7 +544,7 @@
             <h2 class="section-title">Let's talk</h2>
             <p style="color: var(--slate); max-width: 540px; margin: 0 auto;">Whether you're looking for a permanent technology leader, need someone to navigate a critical transition, or want strategic advice &#8212; I'd welcome a conversation.</p>
             <div class="contact-links">
-                <a href="/cdn-cgi/l/email-protection#c4b7ada9abaae2e7f2f0ffb7b0b6a5b0b1b7b7bdb7b0a1a9b7eaa6adbe" class="contact-link primary">
+                <a href="mailto:simon&#64;stratussystems.biz" class="contact-link primary">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
@@ -572,28 +572,28 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         (function() {
-            const testimonials = document.querySelectorAll('.testimonial');
-            const dots = document.querySelectorAll('.testimonial-dot');
-            let currentIndex = 0;
-            let intervalId;
+            var testimonials = document.querySelectorAll('.testimonial');
+            var dots = document.querySelectorAll('.testimonial-dot');
+            var currentIndex = 0;
+            var intervalId;
 
             function showTestimonial(index) {
-                testimonials.forEach(function(t, i) {
+                for (var i = 0; i < testimonials.length; i++) {
                     if (i === index) {
-                        t.classList.add('active');
+                        testimonials[i].classList.add('active');
                     } else {
-                        t.classList.remove('active');
+                        testimonials[i].classList.remove('active');
                     }
-                });
-                dots.forEach(function(d, i) {
-                    if (i === index) {
-                        d.classList.add('active');
+                }
+                for (var j = 0; j < dots.length; j++) {
+                    if (j === index) {
+                        dots[j].classList.add('active');
                     } else {
-                        d.classList.remove('active');
+                        dots[j].classList.remove('active');
                     }
-                });
+                }
                 currentIndex = index;
             }
 
@@ -606,7 +606,16 @@
                 intervalId = setInterval(nextTestimonial, 8000);
             }
 
-            dots.forEach(function(dot) {
-                dot.addEventListener('click', function() {
+            for (var k = 0; k < dots.length; k++) {
+                dots[k].addEventListener('click', function() {
                     clearInterval(intervalId);
-                    showTestimonial(parseInt(dot.getAttribute('data-index
+                    showTestimonial(parseInt(this.getAttribute('data-index')));
+                    startAutoAdvance();
+                });
+            }
+
+            startAutoAdvance();
+        })();
+    </script>
+</body>
+</html>
