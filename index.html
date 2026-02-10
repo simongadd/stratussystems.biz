@@ -14,8 +14,9 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Simon Gadd — Transformation leader who delivers. 20+ years scaling telco and IoT businesses. CTO/CPO, interim executive, AI-driven platform strategy, and IT due diligence for PE/VC.">
-    <title>Simon Gadd | Technology Leadership & Transformation</title>
+    <meta name="description" content="Simon Gadd — Interim MD & Fractional CTO for Telco & IoT. Turnaround specialist who delivers. 20+ years scaling telco and IoT businesses. Available for interim, fractional, and permanent leadership roles.">
+    <meta name="keywords" content="interim CTO, fractional CTO, interim MD, telco transformation, IoT platform, eSIM, turnaround, technology leadership">
+    <title>Simon Gadd | Interim MD & Fractional CTO | Telco & IoT Transformation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -186,6 +187,54 @@
         }
         .turnaround-box p { color: var(--slate); font-size: 0.95rem; line-height: 1.7; }
 
+        /* Case Study Grid for multiple examples */
+        .case-studies { background: var(--navy-light); padding: 5rem 0; }
+        .case-study-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 3rem; }
+        .case-study-card {
+            background: var(--navy);
+            border-radius: 8px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+        .case-study-card:hover { border-color: var(--blue); transform: translateY(-4px); }
+        .case-study-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        .case-study-card .duration {
+            color: var(--blue);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .case-study-card .challenge {
+            color: var(--slate);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+        }
+        .case-study-outcomes { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+        .outcome {
+            flex: 1;
+            min-width: 120px;
+        }
+        .outcome-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--blue);
+            line-height: 1;
+        }
+        .outcome-label {
+            color: var(--slate);
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+        }
+
         .about { padding: 6rem 0; border-top: 1px solid rgba(148, 163, 184, 0.1); }
         .about-content { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: start; }
         .about-text p { color: var(--slate); margin-bottom: 1.5rem; font-size: 1.05rem; }
@@ -205,6 +254,86 @@
             color: var(--white);
         }
         .ai-card p { color: var(--slate); font-size: 0.95rem; }
+
+        /* How I Work Section */
+        .how-i-work { padding: 6rem 0; border-top: 1px solid rgba(148, 163, 184, 0.1); }
+        .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem; }
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+        .process-step::after {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            right: -1rem;
+            width: 2rem;
+            height: 2px;
+            background: var(--blue);
+            opacity: 0.3;
+        }
+        .process-step:last-child::after { display: none; }
+        .step-number {
+            width: 4rem;
+            height: 4rem;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .process-step h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+        }
+        .process-step p {
+            color: var(--slate);
+            font-size: 0.9rem;
+        }
+
+        /* Ideal Engagements Section */
+        .ideal-engagements { background: var(--navy-light); padding: 6rem 0; }
+        .engagement-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+        .engagement-card {
+            padding: 2rem;
+            background: var(--navy);
+            border-radius: 8px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+        .engagement-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--blue-light);
+        }
+        .engagement-card p {
+            color: var(--slate);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        .engagement-card ul {
+            list-style: none;
+        }
+        .engagement-card li {
+            color: var(--slate);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            padding-left: 1.25rem;
+            position: relative;
+        }
+        .engagement-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--blue);
+        }
 
         .testimonials { padding: 6rem 0; }
         .testimonials-container { max-width: 800px; margin: 0 auto; text-align: center; }
@@ -256,10 +385,29 @@
         .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
         .service-card { padding: 2.5rem; background: var(--navy-light); border-radius: 8px; border: 1px solid rgba(148, 163, 184, 0.1); transition: all 0.3s; }
         .service-card:hover { border-color: var(--blue); transform: translateY(-4px); }
+        .service-card.featured { 
+            border-color: var(--blue); 
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, var(--navy-light) 100%);
+        }
         .service-icon { width: 48px; height: 48px; background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
         .service-icon svg { width: 24px; height: 24px; color: var(--white); }
         .service-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 500; margin-bottom: 1rem; }
-        .service-card p { color: var(--slate); font-size: 0.95rem; }
+        .service-card p { color: var(--slate); font-size: 0.95rem; margin-bottom: 1rem; }
+        .service-card .engagement-types {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+        }
+        .service-card .engagement-types span {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 100px;
+            color: var(--blue-light);
+            font-size: 0.75rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
 
         .expertise { background: var(--navy-light); padding: 6rem 0; position: relative; overflow: hidden; }
         .expertise::before {
@@ -285,6 +433,20 @@
         .contact-link.primary { background: var(--blue); border-color: var(--blue); color: var(--white); }
         .contact-link.primary:hover { background: var(--blue-light); border-color: var(--blue-light); }
 
+        .company-notice {
+            margin-top: 3rem;
+            padding: 1.5rem 2rem;
+            background: var(--navy-light);
+            border-radius: 8px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            display: inline-block;
+        }
+        .company-notice p {
+            color: var(--slate);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
         footer { padding: 2rem 0; border-top: 1px solid rgba(148, 163, 184, 0.1); text-align: center; }
         footer p { color: var(--slate); font-size: 0.85rem; }
 
@@ -295,15 +457,20 @@
             .hero-tags { justify-content: center; }
             .headshot-wrapper { width: 280px; height: 350px; }
             .turnaround-content { grid-template-columns: 1fr; }
+            .case-study-grid { grid-template-columns: 1fr; }
             .about-content { grid-template-columns: 1fr; }
             .ai-grid { grid-template-columns: 1fr; }
             .services-grid { grid-template-columns: 1fr; }
             .expertise-grid { grid-template-columns: 1fr; }
+            .process-grid { grid-template-columns: repeat(2, 1fr); }
+            .process-step::after { display: none; }
+            .engagement-grid { grid-template-columns: 1fr; }
             .nav-links { display: none; }
         }
         @media (max-width: 640px) {
             .credentials { grid-template-columns: 1fr; }
             .contact-links { flex-direction: column; align-items: center; }
+            .process-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -312,8 +479,8 @@
         <div class="container">
             <a href="#" class="logo"><img src="stratus-logo-dark.png" alt="Stratus Systems" class="logo-img"></a>
             <ul class="nav-links">
-                <li><a href="#turnaround">Track Record</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#track-record">Track Record</a></li>
+                <li><a href="#how-i-work">How I Work</a></li>
                 <li><a href="#services">Working Together</a></li>
                 <li><a href="#expertise">Expertise</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -324,13 +491,14 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <span class="hero-label">Technology Leadership</span>
-                <h1>I lead technology organisations through transformation</h1>
-                <p>20+ years converting telco complexity into commercial results - from early-stage startup through scale-up to successful exit. Whether you're looking for a permanent technology leader or strategic support through a critical transition, I deliver when it matters.</p>
+                <span class="hero-label">Interim MD &amp; Fractional CTO</span>
+                <h1>I get telco businesses from crisis to stability in under 12 months</h1>
+                <p>Turnaround specialist who delivers. 20+ years converting telco complexity into commercial results — from founding-team startup to £25m exit. Available for interim, fractional, or permanent leadership roles.</p>
                 <div class="hero-tags">
+                    <span class="hero-tag">Available Immediately</span>
                     <span class="hero-tag">SC Clearable</span>
                     <span class="hero-tag">UK/Swiss National</span>
-                    <span class="hero-tag">Available Now</span>
+                    <span class="hero-tag">Day Rate on Application</span>
                 </div>
                 <a href="#contact" class="cta-button">
                     Let's talk
@@ -347,33 +515,168 @@
         </div>
     </section>
 
-    <section class="turnaround" id="turnaround">
+    <section class="case-studies" id="track-record">
         <div class="container">
-            <div class="turnaround-content">
-                <div class="turnaround-intro">
-                    <span class="section-label">Recent Example</span>
-                    <h2 class="section-title">IoT platform turnaround - 6 months</h2>
-                    <p style="color: var(--slate); max-width: 700px;">Took over as MD of a struggling IoT connectivity platform serving a major UK mobile operator. The platform was missing SLAs, the customer relationship was fractured, and contract renewal was at risk.</p>
+            <span class="section-label">Track Record</span>
+            <h2 class="section-title">Transformation examples</h2>
+            <p style="color: var(--slate); max-width: 700px;">Two examples from different stages of my career — demonstrating I can parachute in and deliver, or build something from scratch over time.</p>
+            
+            <div class="case-study-grid">
+                <div class="case-study-card">
+                    <h3>IoT Platform Turnaround</h3>
+                    <p class="duration">6 Months | Interim MD</p>
+                    <p class="challenge">Took over as MD of a struggling IoT connectivity platform. Platform was missing SLAs, customer relationship was fractured, and contract renewal was at risk.</p>
+                    <div class="case-study-outcomes">
+                        <div class="outcome">
+                            <div class="outcome-number">6mo</div>
+                            <div class="outcome-label">Platform rebuild</div>
+                        </div>
+                        <div class="outcome">
+                            <div class="outcome-number">3yr</div>
+                            <div class="outcome-label">Contract secured</div>
+                        </div>
+                        <div class="outcome">
+                            <div class="outcome-number">300K+</div>
+                            <div class="outcome-label">SIMs managed</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="turnaround-box inherited">
-                    <h3>Inherited</h3>
+                
+                <div class="case-study-card">
+                    <h3>Telco Software Scale-Up</h3>
+                    <p class="duration">9 Years | Board Director</p>
+                    <p class="challenge">Joined as employee #2 at a telco clearing startup. Built the engineering function, product suite, and commercial capability from a blank sheet.</p>
+                    <div class="case-study-outcomes">
+                        <div class="outcome">
+                            <div class="outcome-number">3→200+</div>
+                            <div class="outcome-label">Staff growth</div>
+                        </div>
+                        <div class="outcome">
+                            <div class="outcome-number">£25m</div>
+                            <div class="outcome-label">Exit value</div>
+                        </div>
+                        <div class="outcome">
+                            <div class="outcome-number">Tier-1</div>
+                            <div class="outcome-label">MNO clients</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-i-work" id="how-i-work">
+        <div class="container">
+            <span class="section-label">How I Work</span>
+            <h2 class="section-title">From first call to measurable impact</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Discovery Call</h3>
+                    <p>30-minute conversation to understand your situation, challenges, and what success looks like.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Scoping</h3>
+                    <p>Define engagement model, deliverables, and success metrics. No ambiguity about what you're getting.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Rapid Assessment</h3>
+                    <p>First 2 weeks: deep-dive into the business. Stakeholder interviews, system review, quick wins identified.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Execute &amp; Deliver</h3>
+                    <p>Weekly stakeholder updates, clear milestones, measurable outcomes. No mystery about progress.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ideal-engagements">
+        <div class="container">
+            <span class="section-label">Ideal Engagements</span>
+            <h2 class="section-title">Where I add the most value</h2>
+            <div class="engagement-grid">
+                <div class="engagement-card">
+                    <h3>Turnaround Situations</h3>
+                    <p>Platform in crisis. Customer relationship damaged. Contract at risk. Team underperforming.</p>
                     <ul>
-                        <li>Platform in crisis - missing SLAs</li>
-                        <li>Customer relationship fractured</li>
-                        <li>Contract renewal at risk</li>
+                        <li>Rapid stabilisation</li>
+                        <li>Process implementation</li>
+                        <li>Customer recovery</li>
+                        <li>Team restructuring</li>
                     </ul>
                 </div>
-                <div class="turnaround-box delivered">
-                    <h3>Delivered</h3>
+                <div class="engagement-card">
+                    <h3>Scale-Up Leadership</h3>
+                    <p>Product-market fit achieved. Now need experienced leadership to scale team, process, and commercial.</p>
                     <ul>
-                        <li>Complete platform rebuild in 6 months</li>
-                        <li>New 3-year contract secured</li>
-                        <li>300K+ SIMs under management</li>
+                        <li>Hiring and team building</li>
+                        <li>Go-to-market execution</li>
+                        <li>Tier-1 deal closing</li>
+                        <li>Board-level governance</li>
                     </ul>
                 </div>
-                <div class="turnaround-box context">
-                    <h3>How</h3>
-                    <p>Led a 28-person distributed team (UK product, India engineering). Established incident management, SLAs, change control, and security compliance for a regulated telco environment.</p>
+                <div class="engagement-card">
+                    <h3>PE/VC Portfolio Support</h3>
+                    <p>Investor-backed telco software company needs operating expertise or due diligence support.</p>
+                    <ul>
+                        <li>IT due diligence</li>
+                        <li>Post-acquisition integration</li>
+                        <li>Operating partner support</li>
+                        <li>Exit preparation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <span class="section-label">Working Together</span>
+            <h2 class="section-title">Engagement models</h2>
+            <div class="services-grid">
+                <div class="service-card featured">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3>Interim &amp; Fractional</h3>
+                    <p>MD, CTO, or CPO on an interim or fractional basis. Hands-on leadership for turnarounds, scale-ups, or bridge periods. Full P&amp;L capability.</p>
+                    <div class="engagement-types">
+                        <span>Interim: 4-5 days/week</span>
+                        <span>Fractional: 2-3 days/week</span>
+                        <span>6-12 month typical</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h3>Strategic Advisory</h3>
+                    <p>IT due diligence for PE/VC investments. Technology strategy and roadmap development. AI readiness assessment. Market positioning for telecoms and connectivity businesses.</p>
+                    <div class="engagement-types">
+                        <span>Project-based</span>
+                        <span>Retainer available</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                    </div>
+                    <h3>Permanent Leadership</h3>
+                    <p>CTO, CPO, or MD roles where I can build and lead technology organisations for the long term. I thrive in environments that need both strategic vision and hands-on delivery.</p>
+                    <div class="engagement-types">
+                        <span>Full-time</span>
+                        <span>UK or Europe</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -385,11 +688,10 @@
                 <div class="about-text">
                     <span class="section-label">About</span>
                     <h2 class="section-title">Startup to scale-up to exit</h2>
-                    <p>I've lived the full company lifecycle. Early in my career, I joined a telecoms startup as one of the first technical hires and helped build it through rapid growth to eventual acquisition - giving me first-hand experience of sell-side preparation and what acquirers look for.</p>
+                    <p>I've lived the full company lifecycle. Early in my career, I joined a telecoms startup as one of the first technical hires and helped build it through rapid growth to eventual acquisition — giving me first-hand experience of sell-side preparation and what acquirers look for.</p>
                     <p>At Nextgen, I joined as employee #2 and helped scale it from 3 to 200+ staff across multiple countries. Built the Mobile Roaming Financial Clearing and IOT Discount Management platforms from a blank sheet. Central to securing Tier-1 MNO clients globally.</p>
                     <p>Most recently as Managing Director of Nextgen SIMplify, I had full P&amp;L ownership, defined the 3-year strategy, and integrated AI-driven analytics with eSIM/5G-SA support. I present quarterly to boards and work fluently with investor-style forecasting and governance.</p>
-                    <p>I also spent 4 years on MoD contracts (SC Cleared), building Oracle APEX systems for defence - giving me deep understanding of government hosting, engineering standards, and orchestration requirements.</p>
-                    <p>I'm equally comfortable as a hands-on technology leader in a permanent role or providing strategic support through advisory and interim engagements.</p>
+                    <p>I also spent 4 years on MoD contracts (SC Cleared), building Oracle APEX systems for defence — giving me deep understanding of government hosting, engineering standards, and orchestration requirements.</p>
                 </div>
                 <div class="credentials">
                     <div class="credential">
@@ -401,8 +703,8 @@
                         <div class="credential-text">Staff growth at Nextgen</div>
                     </div>
                     <div class="credential">
-                        <div class="credential-number">Exit</div>
-                        <div class="credential-text">Sell-side preparation experience</div>
+                        <div class="credential-number">£25m</div>
+                        <div class="credential-text">Exit contribution</div>
                     </div>
                     <div class="credential">
                         <div class="credential-number">SC</div>
@@ -416,15 +718,15 @@
     <section class="ai-credentials">
         <div class="container">
             <span class="section-label">AI &amp; Transformation</span>
-            <h2 class="section-title">Building production AI - not PowerPoint</h2>
+            <h2 class="section-title">Building production AI — not PowerPoint</h2>
             <div class="ai-grid">
                 <div class="ai-card">
                     <h3>Agentic AI for Telcos</h3>
-                    <p>Building production PoC systems that autonomously execute business processes - call centre optimisation, billing dispute resolution, customer journey automation. Working systems, not vapourware.</p>
+                    <p>Building production PoC systems that autonomously execute business processes — call centre optimisation, billing dispute resolution, customer journey automation. Working systems, not vapourware.</p>
                 </div>
                 <div class="ai-card">
                     <h3>Decision AI Expertise</h3>
-                    <p>Deep understanding of AI systems that provide auditable, explainable recommendations for complex commercial decisions - traffic steering, pricing optimisation, risk assessment.</p>
+                    <p>Deep understanding of AI systems that provide auditable, explainable recommendations for complex commercial decisions — traffic steering, pricing optimisation, risk assessment.</p>
                 </div>
                 <div class="ai-card">
                     <h3>AI-Driven Analytics Platform</h3>
@@ -432,7 +734,7 @@
                 </div>
                 <div class="ai-card">
                     <h3>API-First Platform Design</h3>
-                    <p>Led architecture of IoT CMP with full programmatic control - the foundation for AI/ML integration and autonomous operations.</p>
+                    <p>Led architecture of IoT CMP with full programmatic control — the foundation for AI/ML integration and autonomous operations.</p>
                 </div>
             </div>
         </div>
@@ -445,7 +747,7 @@
                 <h2 class="section-title">Recommendations</h2>
                 <div class="testimonial-slider">
                     <div class="testimonial active">
-                        <p class="testimonial-quote">Simon was a key member of the leadership team - able to support the core business, as well as autonomously drive his own division. His views were always listened to as commercial and strategic. Simon would be a very valuable member of any senior leadership team.</p>
+                        <p class="testimonial-quote">Simon was a key member of the leadership team — able to support the core business, as well as autonomously drive his own division. His views were always listened to as commercial and strategic. Simon would be a very valuable member of any senior leadership team.</p>
                         <p class="testimonial-author">Nicholas Hoare</p>
                         <p class="testimonial-role">CEO, Nextgen Clearing</p>
                     </div>
@@ -470,42 +772,6 @@
                     <button class="testimonial-dot" data-index="1" aria-label="Testimonial 2"></button>
                     <button class="testimonial-dot" data-index="2" aria-label="Testimonial 3"></button>
                     <button class="testimonial-dot" data-index="3" aria-label="Testimonial 4"></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="services" id="services">
-        <div class="container">
-            <span class="section-label">Working Together</span>
-            <h2 class="section-title">How I can help</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                        </svg>
-                    </div>
-                    <h3>Permanent Leadership</h3>
-                    <p>CTO, CPO, or CTPO roles where I can build and lead technology organisations for the long term. I thrive in environments that need both strategic vision and hands-on delivery.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>
-                    </div>
-                    <h3>Interim &amp; Fractional</h3>
-                    <p>CTO, MD, or CPO roles on an interim or fractional basis. Hands-on leadership for turnarounds, scale-ups, or bridge periods. Full P&amp;L capability.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                        </svg>
-                    </div>
-                    <h3>Strategic Advisory</h3>
-                    <p>IT due diligence for PE/VC investments. Technology strategy and roadmap development. AI readiness assessment. Market positioning for telecoms and connectivity businesses.</p>
                 </div>
             </div>
         </div>
@@ -553,9 +819,15 @@
         <div class="container">
             <span class="section-label">Contact</span>
             <h2 class="section-title">Let's talk</h2>
-            <p style="color: var(--slate); max-width: 540px; margin: 0 auto;">Whether you're looking for a permanent technology leader, need someone to navigate a critical transition, or want strategic advice - I'd welcome a conversation.</p>
+            <p style="color: var(--slate); max-width: 600px; margin: 0 auto;">Whether you need interim leadership for a turnaround, fractional support during a transition, or a permanent technology leader — I'd welcome a conversation.</p>
             <div class="contact-links">
-                <a href="mailto:simon&#64;stratussystems.biz" class="contact-link primary">
+                <a href="tel:+447966405903" class="contact-link primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    +44 7966 405 903
+                </a>
+                <a href="mailto:simon&#64;stratussystems.biz" class="contact-link">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
@@ -573,6 +845,9 @@
                     </svg>
                     Download CV
                 </a>
+            </div>
+            <div class="company-notice">
+                <p>I operate through <strong>Stratus Systems Ltd</strong>, a UK limited company. Professional indemnity and public liability insurance in place.</p>
             </div>
         </div>
     </section>
