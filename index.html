@@ -14,7 +14,7 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Simon Gadd — Interim MD & Fractional CTO for Telco & IoT. Turnaround specialist who delivers. 20+ years scaling telco and IoT businesses. Available for interim, fractional, and permanent leadership roles.">
+    <meta name="description" content="Simon Gadd — Interim MD & Fractional CTO for Telco & IoT. Turnaround specialist who delivers. 20+ years scaling telco and IoT businesses.">
     <meta name="keywords" content="interim CTO, fractional CTO, interim MD, telco transformation, IoT platform, eSIM, turnaround, technology leadership">
     <title>Simon Gadd | Interim MD & Fractional CTO | Telco & IoT Transformation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,13 +47,8 @@
             background: linear-gradient(to bottom, var(--navy) 0%, transparent 100%);
         }
         nav .container { display: flex; justify-content: space-between; align-items: center; }
-        .logo {
-            text-decoration: none;
-        }
-        .logo-img {
-            height: 100px;
-            width: auto;
-        }
+        .logo { text-decoration: none; }
+        .logo-img { height: 100px; width: auto; }
         .nav-links { display: flex; gap: 2.5rem; list-style: none; }
         .nav-links a { color: var(--slate); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.3s; }
         .nav-links a:hover { color: var(--white); }
@@ -145,49 +140,9 @@
             filter: grayscale(10%);
         }
 
-        .turnaround { background: var(--navy-light); padding: 5rem 0; }
-        .turnaround-content { 
-            display: grid; 
-            grid-template-columns: 1fr 1fr 1fr; 
-            gap: 3rem; 
-            align-items: start;
-        }
-        .turnaround-intro { grid-column: 1 / -1; margin-bottom: 1rem; }
         .section-label { color: var(--blue); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem; }
         .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 500; margin-bottom: 1rem; }
-        .turnaround-box {
-            padding: 2rem;
-            border-radius: 8px;
-            border: 1px solid rgba(148, 163, 184, 0.1);
-        }
-        .turnaround-box.inherited { background: rgba(239, 68, 68, 0.05); border-color: rgba(239, 68, 68, 0.2); }
-        .turnaround-box.delivered { background: rgba(34, 197, 94, 0.05); border-color: rgba(34, 197, 94, 0.2); }
-        .turnaround-box.context { background: var(--navy); }
-        .turnaround-box h3 { 
-            font-family: 'Cormorant Garamond', serif; 
-            font-size: 1.3rem; 
-            font-weight: 500; 
-            margin-bottom: 1rem;
-        }
-        .turnaround-box.inherited h3 { color: #f87171; }
-        .turnaround-box.delivered h3 { color: #4ade80; }
-        .turnaround-box ul { list-style: none; }
-        .turnaround-box li { 
-            color: var(--slate); 
-            font-size: 0.95rem; 
-            margin-bottom: 0.75rem;
-            padding-left: 1.25rem;
-            position: relative;
-        }
-        .turnaround-box li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            color: var(--blue);
-        }
-        .turnaround-box p { color: var(--slate); font-size: 0.95rem; line-height: 1.7; }
 
-        /* Case Study Grid for multiple examples */
         .case-studies { background: var(--navy-light); padding: 5rem 0; }
         .case-study-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 3rem; }
         .case-study-card {
@@ -204,12 +159,7 @@
             font-weight: 500;
             margin-bottom: 0.5rem;
         }
-        .case-study-card .duration {
-            color: var(--blue);
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
+        .case-study-card .duration { color: var(--blue); font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem; }
         .case-study-card .challenge {
             color: var(--slate);
             font-size: 0.95rem;
@@ -218,126 +168,48 @@
             border-bottom: 1px solid rgba(148, 163, 184, 0.1);
         }
         .case-study-outcomes { display: flex; gap: 1.5rem; flex-wrap: wrap; }
-        .outcome {
-            flex: 1;
-            min-width: 120px;
-        }
+        .outcome { flex: 1; min-width: 120px; }
         .outcome-number {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.75rem;
-            font-weight: 600;
-            color: var(--blue);
-            line-height: 1;
+            font-size: 1.75rem; font-weight: 600;
+            color: var(--blue); line-height: 1;
         }
-        .outcome-label {
-            color: var(--slate);
-            font-size: 0.8rem;
-            margin-top: 0.25rem;
+        .outcome-label { color: var(--slate); font-size: 0.8rem; margin-top: 0.25rem; }
+
+        /* Logo Bar */
+        .logo-bar {
+            padding: 4rem 0;
+            background: var(--navy-light);
         }
-
-        .about { padding: 6rem 0; border-top: 1px solid rgba(148, 163, 184, 0.1); }
-        .about-content { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: start; }
-        .about-text p { color: var(--slate); margin-bottom: 1.5rem; font-size: 1.05rem; }
-        .credentials { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-        .credential { padding: 1.5rem; background: var(--navy-light); border-radius: 8px; border: 1px solid rgba(59, 130, 246, 0.1); }
-        .credential-number { font-family: 'Cormorant Garamond', serif; font-size: 2.25rem; font-weight: 600; color: var(--blue); line-height: 1; }
-        .credential-text { color: var(--slate); font-size: 0.85rem; margin-top: 0.5rem; }
-
-        .ai-credentials { background: var(--navy-light); padding: 6rem 0; }
-        .ai-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 3rem; }
-        .ai-card { padding: 2rem; background: var(--navy); border-radius: 8px; border: 1px solid rgba(59, 130, 246, 0.15); }
-        .ai-card h3 { 
-            font-family: 'Cormorant Garamond', serif; 
-            font-size: 1.35rem; 
-            font-weight: 500; 
-            margin-bottom: 0.75rem;
-            color: var(--white);
-        }
-        .ai-card p { color: var(--slate); font-size: 0.95rem; }
-
-        /* How I Work Section */
-        .how-i-work { padding: 6rem 0; border-top: 1px solid rgba(148, 163, 184, 0.1); }
-        .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem; }
-        .process-step {
+        .logo-bar .section-label {
             text-align: center;
-            position: relative;
+            margin-bottom: 2.5rem;
         }
-        .process-step::after {
-            content: '';
-            position: absolute;
-            top: 2rem;
-            right: -1rem;
-            width: 2rem;
-            height: 2px;
-            background: var(--blue);
-            opacity: 0.3;
-        }
-        .process-step:last-child::after { display: none; }
-        .step-number {
-            width: 4rem;
-            height: 4rem;
-            background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%);
-            border-radius: 50%;
+        .logo-grid {
             display: flex;
-            align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            font-weight: 600;
+            align-items: center;
+            gap: 3.5rem;
+            flex-wrap: wrap;
         }
-        .process-step h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.25rem;
-            font-weight: 500;
-            margin-bottom: 0.75rem;
+        .logo-item {
+            height: 50px;
+            width: auto;
+            max-width: 120px;
+            object-fit: contain;
+            filter: grayscale(1) brightness(5) contrast(0.3);
+            opacity: 0.45;
+            transition: all 0.4s ease;
         }
-        .process-step p {
-            color: var(--slate);
-            font-size: 0.9rem;
-        }
-
-        /* Ideal Engagements Section */
-        .ideal-engagements { background: var(--navy-light); padding: 6rem 0; }
-        .engagement-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
-        .engagement-card {
-            padding: 2rem;
-            background: var(--navy);
-            border-radius: 8px;
-            border: 1px solid rgba(148, 163, 184, 0.1);
-        }
-        .engagement-card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.35rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-            color: var(--blue-light);
-        }
-        .engagement-card p {
-            color: var(--slate);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-        .engagement-card ul {
-            list-style: none;
-        }
-        .engagement-card li {
-            color: var(--slate);
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-            padding-left: 1.25rem;
-            position: relative;
-        }
-        .engagement-card li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--blue);
+        .logo-item:hover {
+            opacity: 0.75;
+            filter: grayscale(1) brightness(5) contrast(0.4);
         }
 
+        /* Testimonials */
         .testimonials { padding: 6rem 0; }
         .testimonials-container { max-width: 800px; margin: 0 auto; text-align: center; }
-        .testimonial-slider { position: relative; min-height: 280px; margin-top: 3rem; }
+        .testimonial-slider { position: relative; min-height: 300px; margin-top: 3rem; }
         .testimonial {
             position: absolute;
             top: 0; left: 0; right: 0;
@@ -346,10 +218,7 @@
             transition: opacity 0.5s ease, transform 0.5s ease;
             padding: 2rem;
         }
-        .testimonial.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .testimonial.active { opacity: 1; transform: translateY(0); }
         .testimonial-quote {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.5rem;
@@ -359,8 +228,8 @@
             color: var(--white);
             margin-bottom: 2rem;
         }
-        .testimonial-quote::before { content: '"'; color: var(--blue); }
-        .testimonial-quote::after { content: '"'; color: var(--blue); }
+        .testimonial-quote::before { content: '\201C'; color: var(--blue); }
+        .testimonial-quote::after { content: '\201D'; color: var(--blue); }
         .testimonial-author { color: var(--blue); font-weight: 600; font-size: 1rem; }
         .testimonial-role { color: var(--slate); font-size: 0.9rem; margin-top: 0.25rem; }
         .testimonial-dots {
@@ -381,33 +250,70 @@
         .testimonial-dot.active { opacity: 1; background: var(--blue); }
         .testimonial-dot:hover { opacity: 0.7; }
 
+        .how-i-work { padding: 6rem 0; border-top: 1px solid rgba(148, 163, 184, 0.1); }
+        .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem; }
+        .process-step { text-align: center; position: relative; }
+        .process-step::after {
+            content: '';
+            position: absolute;
+            top: 2rem; right: -1rem;
+            width: 2rem; height: 2px;
+            background: var(--blue);
+            opacity: 0.3;
+        }
+        .process-step:last-child::after { display: none; }
+        .step-number {
+            width: 4rem; height: 4rem;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem; font-weight: 600;
+        }
+        .process-step h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 500; margin-bottom: 0.75rem; }
+        .process-step p { color: var(--slate); font-size: 0.9rem; }
+
+        .ideal-engagements { background: var(--navy-light); padding: 6rem 0; }
+        .engagement-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+        .engagement-card {
+            padding: 2rem;
+            background: var(--navy);
+            border-radius: 8px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+        .engagement-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 500; margin-bottom: 1rem; color: var(--blue-light); }
+        .engagement-card p { color: var(--slate); font-size: 0.95rem; margin-bottom: 1rem; }
+        .engagement-card ul { list-style: none; }
+        .engagement-card li { color: var(--slate); font-size: 0.9rem; margin-bottom: 0.5rem; padding-left: 1.25rem; position: relative; }
+        .engagement-card li::before { content: '\2713'; position: absolute; left: 0; color: var(--blue); }
+
         .services { padding: 6rem 0; }
-        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+        .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 3rem; }
         .service-card { padding: 2.5rem; background: var(--navy-light); border-radius: 8px; border: 1px solid rgba(148, 163, 184, 0.1); transition: all 0.3s; }
         .service-card:hover { border-color: var(--blue); transform: translateY(-4px); }
-        .service-card.featured { 
-            border-color: var(--blue); 
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, var(--navy-light) 100%);
-        }
+        .service-card.featured { border-color: var(--blue); background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, var(--navy-light) 100%); }
         .service-icon { width: 48px; height: 48px; background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
         .service-icon svg { width: 24px; height: 24px; color: var(--white); }
         .service-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 500; margin-bottom: 1rem; }
         .service-card p { color: var(--slate); font-size: 0.95rem; margin-bottom: 1rem; }
-        .service-card .engagement-types {
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(148, 163, 184, 0.1);
-        }
-        .service-card .engagement-types span {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            background: rgba(59, 130, 246, 0.1);
-            border-radius: 100px;
-            color: var(--blue-light);
-            font-size: 0.75rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
+        .service-card .engagement-types { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(148, 163, 184, 0.1); }
+        .service-card .engagement-types span { display: inline-block; padding: 0.25rem 0.75rem; background: rgba(59, 130, 246, 0.1); border-radius: 100px; color: var(--blue-light); font-size: 0.75rem; margin-right: 0.5rem; margin-bottom: 0.5rem; }
+        .services-note { margin-top: 1.5rem; color: var(--slate); font-size: 0.95rem; }
+
+        .about { padding: 6rem 0; border-top: 1px solid rgba(148, 163, 184, 0.1); }
+        .about-content { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: start; }
+        .about-text p { color: var(--slate); margin-bottom: 1.5rem; font-size: 1.05rem; }
+        .credentials { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .credential { padding: 1.5rem; background: var(--navy-light); border-radius: 8px; border: 1px solid rgba(59, 130, 246, 0.1); }
+        .credential-number { font-family: 'Cormorant Garamond', serif; font-size: 2.25rem; font-weight: 600; color: var(--blue); line-height: 1; }
+        .credential-text { color: var(--slate); font-size: 0.85rem; margin-top: 0.5rem; }
+
+        .ai-credentials { background: var(--navy-light); padding: 6rem 0; }
+        .ai-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 3rem; }
+        .ai-card { padding: 2rem; background: var(--navy); border-radius: 8px; border: 1px solid rgba(59, 130, 246, 0.15); }
+        .ai-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 500; margin-bottom: 0.75rem; color: var(--white); }
+        .ai-card p { color: var(--slate); font-size: 0.95rem; }
 
         .expertise { background: var(--navy-light); padding: 6rem 0; position: relative; overflow: hidden; }
         .expertise::before {
@@ -433,19 +339,8 @@
         .contact-link.primary { background: var(--blue); border-color: var(--blue); color: var(--white); }
         .contact-link.primary:hover { background: var(--blue-light); border-color: var(--blue-light); }
 
-        .company-notice {
-            margin-top: 3rem;
-            padding: 1.5rem 2rem;
-            background: var(--navy-light);
-            border-radius: 8px;
-            border: 1px solid rgba(148, 163, 184, 0.1);
-            display: inline-block;
-        }
-        .company-notice p {
-            color: var(--slate);
-            font-size: 0.9rem;
-            margin: 0;
-        }
+        .company-notice { margin-top: 3rem; padding: 1.5rem 2rem; background: var(--navy-light); border-radius: 8px; border: 1px solid rgba(148, 163, 184, 0.1); display: inline-block; }
+        .company-notice p { color: var(--slate); font-size: 0.9rem; margin: 0; }
 
         footer { padding: 2rem 0; border-top: 1px solid rgba(148, 163, 184, 0.1); text-align: center; }
         footer p { color: var(--slate); font-size: 0.85rem; }
@@ -456,7 +351,6 @@
             .hero-image { order: 1; margin-bottom: 2rem; }
             .hero-tags { justify-content: center; }
             .headshot-wrapper { width: 280px; height: 350px; }
-            .turnaround-content { grid-template-columns: 1fr; }
             .case-study-grid { grid-template-columns: 1fr; }
             .about-content { grid-template-columns: 1fr; }
             .ai-grid { grid-template-columns: 1fr; }
@@ -466,11 +360,15 @@
             .process-step::after { display: none; }
             .engagement-grid { grid-template-columns: 1fr; }
             .nav-links { display: none; }
+            .logo-grid { gap: 2rem; }
+            .logo-item { height: 40px; max-width: 90px; }
         }
         @media (max-width: 640px) {
             .credentials { grid-template-columns: 1fr; }
             .contact-links { flex-direction: column; align-items: center; }
             .process-grid { grid-template-columns: 1fr; }
+            .logo-grid { gap: 1.5rem; }
+            .logo-item { height: 35px; max-width: 80px; }
         }
     </style>
 </head>
@@ -493,9 +391,8 @@
             <div class="hero-content">
                 <span class="hero-label">Interim MD &amp; Fractional CTO</span>
                 <h1>I get telco businesses from crisis to stability in under 12 months</h1>
-                <p>Turnaround specialist who delivers. 20+ years converting telco complexity into commercial results — from founding-team startup to £25m exit. Available for interim, fractional, or permanent leadership roles.</p>
+                <p>Interim MD and Fractional CTO for telco turnarounds, scale-ups, and PE-backed portfolios. 20+ years converting telco complexity into commercial results — from founding-team startup to &pound;25m exit.</p>
                 <div class="hero-tags">
-                    <span class="hero-tag">Available Immediately</span>
                     <span class="hero-tag">SC Clearable</span>
                     <span class="hero-tag">UK/Swiss National</span>
                     <span class="hero-tag">Day Rate on Application</span>
@@ -520,7 +417,6 @@
             <span class="section-label">Track Record</span>
             <h2 class="section-title">Transformation examples</h2>
             <p style="color: var(--slate); max-width: 700px;">Two examples from different stages of my career — demonstrating I can parachute in and deliver, or build something from scratch over time.</p>
-            
             <div class="case-study-grid">
                 <div class="case-study-card">
                     <h3>IoT Platform Turnaround</h3>
@@ -541,14 +437,13 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="case-study-card">
                     <h3>Telco Software Scale-Up</h3>
                     <p class="duration">9 Years | Board Director</p>
                     <p class="challenge">Joined as employee #2 at a telco clearing startup. Built the engineering function, product suite, and commercial capability from a blank sheet.</p>
                     <div class="case-study-outcomes">
                         <div class="outcome">
-                            <div class="outcome-number">3→200+</div>
+                            <div class="outcome-number">3&rarr;200+</div>
                             <div class="outcome-label">Staff growth</div>
                         </div>
                         <div class="outcome">
@@ -560,6 +455,77 @@
                             <div class="outcome-label">MNO clients</div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOGO BAR -->
+    <section class="logo-bar">
+        <div class="container">
+            <p class="section-label">Experience delivering for</p>
+            <div class="logo-grid">
+                <img src="bt_logo.jpg" alt="BT" class="logo-item">
+                <img src="ee_logo.png" alt="EE" class="logo-item">
+                <img src="tmo_logo.png" alt="T-Mobile" class="logo-item">
+                <img src="telstra_logo.png" alt="Telstra" class="logo-item">
+                <img src="A1_logo.png" alt="A1 Telekom" class="logo-item">
+                <img src="mod_logo.png" alt="Ministry of Defence" class="logo-item">
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS - moved up, expanded to 7 -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="testimonials-container">
+                <span class="section-label">What People Say</span>
+                <h2 class="section-title">Recommendations</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial active">
+                        <p class="testimonial-quote">Simon was a key member of the leadership team — able to support the core business, as well as autonomously drive his own division. His views were always listened to as commercial and strategic. Simon would be a very valuable member of any senior leadership team.</p>
+                        <p class="testimonial-author">Nicholas Hoare</p>
+                        <p class="testimonial-role">CEO, Nextgen Clearing</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-quote">A rare combination of deep technical understanding and genuine commercial expertise. Equally comfortable in the boardroom discussing long-term strategy as he is getting into the detail to solve a customer's immediate challenges. Someone of real integrity who colleagues trust.</p>
+                        <p class="testimonial-author">Georg Kaiser</p>
+                        <p class="testimonial-role">Regional Sales Director, Nextgen Clearing</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-quote">Simon hit the ground running rapidly, coming up to speed and fully integrating into our team almost overnight. He is technical in nature, very market savvy, and has keen business insights. He'll be a valuable asset to any organization that engages him.</p>
+                        <p class="testimonial-author">George Woodward</p>
+                        <p class="testimonial-role">President &amp; CEO, Trilogy Networks</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-quote">Simon knows how to link technology solutions to the P&amp;L and shareholder value, enabling him to pitch successfully to senior decision makers. He inspires confidence and trust at all levels including the boardroom and C suite. Simon is the guy you want in the room to get the deal over the line.</p>
+                        <p class="testimonial-author">Keith Greenfield</p>
+                        <p class="testimonial-role">CEO Mentor and Business Adviser</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-quote">Simon really brought our Oracle Apex project to life, helped navigate challenges and found innovative solutions. What set him apart was his ability to speak to a non-technical team in layman's terms — giving clear, concise advice and reassuring team members who do not always embrace change.</p>
+                        <p class="testimonial-author">Lucie W</p>
+                        <p class="testimonial-role">Head of Corporate Operations, Ministry of Defence</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-quote">He instantly builds rapport and quickly establishes himself as a trusted advisor. His ability to turn a business problem into an effective solution is a critical factor in not just gaining trust with clients but also winning business. I would work with Simon again in a heartbeat.</p>
+                        <p class="testimonial-author">Jill Paterson</p>
+                        <p class="testimonial-role">Global Sales Professional</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-quote">Simon always displayed the same traits: professionalism, immense technical knowledge, creativity, open-mindedness and integrity. His impressive communication skills and extensive experience in wholesale roaming are clear differentiators in any winning team.</p>
+                        <p class="testimonial-author">Helena Bertovic Smetisko</p>
+                        <p class="testimonial-role">Head of Services Operations, Comfone AG</p>
+                    </div>
+                </div>
+                <div class="testimonial-dots">
+                    <button class="testimonial-dot active" data-index="0" aria-label="Testimonial 1"></button>
+                    <button class="testimonial-dot" data-index="1" aria-label="Testimonial 2"></button>
+                    <button class="testimonial-dot" data-index="2" aria-label="Testimonial 3"></button>
+                    <button class="testimonial-dot" data-index="3" aria-label="Testimonial 4"></button>
+                    <button class="testimonial-dot" data-index="4" aria-label="Testimonial 5"></button>
+                    <button class="testimonial-dot" data-index="5" aria-label="Testimonial 6"></button>
+                    <button class="testimonial-dot" data-index="6" aria-label="Testimonial 7"></button>
                 </div>
             </div>
         </div>
@@ -665,20 +631,8 @@
                         <span>Retainer available</span>
                     </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                        </svg>
-                    </div>
-                    <h3>Permanent Leadership</h3>
-                    <p>CTO, CPO, or MD roles where I can build and lead technology organisations for the long term. I thrive in environments that need both strategic vision and hands-on delivery.</p>
-                    <div class="engagement-types">
-                        <span>Full-time</span>
-                        <span>UK or Europe</span>
-                    </div>
-                </div>
             </div>
+            <p class="services-note">Also open to the right permanent leadership opportunity — CTO, CPO, or MD roles in the UK or Europe.</p>
         </div>
     </section>
 
@@ -688,7 +642,7 @@
                 <div class="about-text">
                     <span class="section-label">About</span>
                     <h2 class="section-title">Startup to scale-up to exit</h2>
-                    <p>I've lived the full company lifecycle. Early in my career at United Clearing, I was part of the team through two acquisitions (United Clearing → BSG → Syniverse) — giving me first-hand experience of what acquirers look for in technology assets and how to prepare for due diligence.</p>
+                    <p>I've lived the full company lifecycle. Early in my career at United Clearing, I was part of the team through two acquisitions (United Clearing &rarr; BSG &rarr; Syniverse) — giving me first-hand experience of what acquirers look for in technology assets and how to prepare for due diligence.</p>
                     <p>At Nextgen, I joined as employee #2 and helped scale it from 3 to 200+ staff across multiple countries. Built the Mobile Roaming Financial Clearing and IoT Discount Management platforms from a blank sheet. Central to securing Tier-1 MNO clients globally.</p>
                     <p>Most recently as Managing Director of Nextgen SIMplify, I had full P&amp;L ownership, defined the 3-year strategy, and integrated AI-driven analytics with eSIM/5G-SA support. I present quarterly to boards and work fluently with investor-style forecasting and governance.</p>
                     <p>I also spent 4 years on MoD contracts (SC Cleared), building Oracle APEX systems for defence — giving me deep understanding of government hosting, engineering standards, and orchestration requirements.</p>
@@ -699,12 +653,12 @@
                         <div class="credential-text">Years in technology leadership</div>
                     </div>
                     <div class="credential">
-                        <div class="credential-number">3&#8594;200+</div>
+                        <div class="credential-number">3&rarr;200+</div>
                         <div class="credential-text">Staff growth at Nextgen</div>
                     </div>
                     <div class="credential">
                         <div class="credential-number">2x</div>
-                        <div class="credential-text">Acquisitions (UC→BSG→Syniverse)</div>
+                        <div class="credential-text">Acquisitions (UC&rarr;BSG&rarr;Syniverse)</div>
                     </div>
                     <div class="credential">
                         <div class="credential-number">SC</div>
@@ -740,43 +694,6 @@
         </div>
     </section>
 
-    <section class="testimonials">
-        <div class="container">
-            <div class="testimonials-container">
-                <span class="section-label">What People Say</span>
-                <h2 class="section-title">Recommendations</h2>
-                <div class="testimonial-slider">
-                    <div class="testimonial active">
-                        <p class="testimonial-quote">Simon was a key member of the leadership team — able to support the core business, as well as autonomously drive his own division. His views were always listened to as commercial and strategic. Simon would be a very valuable member of any senior leadership team.</p>
-                        <p class="testimonial-author">Nicholas Hoare</p>
-                        <p class="testimonial-role">CEO, Nextgen Clearing</p>
-                    </div>
-                    <div class="testimonial">
-                        <p class="testimonial-quote">A rare combination of deep technical understanding and genuine commercial expertise. Equally comfortable in the boardroom discussing long-term strategy as he is getting into the detail to solve a customer's immediate challenges. Someone of real integrity who colleagues trust.</p>
-                        <p class="testimonial-author">Georg Kaiser</p>
-                        <p class="testimonial-role">Regional Sales Director, Nextgen Clearing</p>
-                    </div>
-                    <div class="testimonial">
-                        <p class="testimonial-quote">A unique blend of excellent relationship management, technical depth and business acumen. A rare combination of skills. He brings a level of enthusiasm and commitment that is refreshing in a business partner.</p>
-                        <p class="testimonial-author">Bryan Burns</p>
-                        <p class="testimonial-role">Transaction Network Services</p>
-                    </div>
-                    <div class="testimonial">
-                        <p class="testimonial-quote">He instantly builds rapport and quickly establishes himself as a trusted advisor. His ability to turn a business problem into an effective solution is a critical factor in not just gaining trust with clients but also winning business. I would work with Simon again in a heartbeat.</p>
-                        <p class="testimonial-author">Jill Paterson</p>
-                        <p class="testimonial-role">Global Sales Professional</p>
-                    </div>
-                </div>
-                <div class="testimonial-dots">
-                    <button class="testimonial-dot active" data-index="0" aria-label="Testimonial 1"></button>
-                    <button class="testimonial-dot" data-index="1" aria-label="Testimonial 2"></button>
-                    <button class="testimonial-dot" data-index="2" aria-label="Testimonial 3"></button>
-                    <button class="testimonial-dot" data-index="3" aria-label="Testimonial 4"></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="expertise" id="expertise">
         <div class="container">
             <div class="expertise-content">
@@ -805,7 +722,7 @@
                         <h4>Leadership</h4>
                         <ul>
                             <li>P&amp;L Ownership</li>
-                            <li>Scale-up (3&#8594;200+)</li>
+                            <li>Scale-up (3&rarr;200+)</li>
                             <li>Tier-1 Deal Closing</li>
                             <li>Board &amp; Investor Comms</li>
                         </ul>
@@ -819,7 +736,7 @@
         <div class="container">
             <span class="section-label">Contact</span>
             <h2 class="section-title">Let's talk</h2>
-            <p style="color: var(--slate); max-width: 600px; margin: 0 auto;">Whether you need interim leadership for a turnaround, fractional support during a transition, or a permanent technology leader — I'd welcome a conversation.</p>
+            <p style="color: var(--slate); max-width: 600px; margin: 0 auto;">Whether you need interim leadership for a turnaround or fractional support during a transition — I'd welcome a conversation. Currently taking on new engagements.</p>
             <div class="contact-links">
                 <a href="tel:+447966405903" class="contact-link primary">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -854,7 +771,7 @@
 
     <footer>
         <div class="container">
-            <p>&#169; 2026 Stratus Systems Ltd. All rights reserved.</p>
+            <p>&copy; 2026 Stratus Systems Ltd. All rights reserved.</p>
         </div>
     </footer>
 
@@ -867,25 +784,16 @@
 
             function showTestimonial(index) {
                 for (var i = 0; i < testimonials.length; i++) {
-                    if (i === index) {
-                        testimonials[i].classList.add('active');
-                    } else {
-                        testimonials[i].classList.remove('active');
-                    }
+                    testimonials[i].classList.toggle('active', i === index);
                 }
                 for (var j = 0; j < dots.length; j++) {
-                    if (j === index) {
-                        dots[j].classList.add('active');
-                    } else {
-                        dots[j].classList.remove('active');
-                    }
+                    dots[j].classList.toggle('active', j === index);
                 }
                 currentIndex = index;
             }
 
             function nextTestimonial() {
-                var next = (currentIndex + 1) % testimonials.length;
-                showTestimonial(next);
+                showTestimonial((currentIndex + 1) % testimonials.length);
             }
 
             function startAutoAdvance() {
