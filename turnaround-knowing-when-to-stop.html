@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LWC91R9RDY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LWC91R9RDY');
+    </script>
+    <!-- End Google Analytics -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A case study in turning around an IoT connectivity platform — rebuilding the product, securing a multi-year contract, and knowing when to protect capital instead of chasing growth. By Simon Gadd, interim MD and fractional CPTO.">
+    <meta name="keywords" content="interim MD, fractional CTO, IoT turnaround, telco transformation, platform turnaround, PE portfolio, technology leadership, connectivity management platform">
+    <meta name="author" content="Simon Gadd, Stratus Systems">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="The Hardest Call a Leader Makes Isn't How to Fix Things — It's Knowing When to Stop">
+    <meta property="og:description" content="A case study in turning around an IoT connectivity platform — and knowing when to protect capital instead of chasing growth.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.stratussystems.biz/insights/turnaround-knowing-when-to-stop.html">
+    <meta property="og:site_name" content="Stratus Systems">
+
+    <title>The Hardest Call a Leader Makes Isn't How to Fix Things — It's Knowing When to Stop | Stratus Systems</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0a1628;
+            --navy-light: #0f1f35;
+            --blue: #3b82f6;
+            --blue-light: #60a5fa;
+            --slate: #94a3b8;
+            --white: #f8fafc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--navy);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+        /* Nav - identical to main site */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0;
+            padding: 1.5rem 0; z-index: 100;
+            background: linear-gradient(to bottom, var(--navy) 0%, transparent 100%);
+        }
+        nav .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { text-decoration: none; }
+        .logo-img { height: 100px; width: auto; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { color: var(--slate); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--white); }
+        .nav-links a.active { color: var(--blue-light); }
+
+        /* Article header */
+        .article-header {
+            padding: 10rem 0 3rem;
+            position: relative;
+        }
+        .article-header .container {
+            max-width: 800px;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--blue);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: color 0.3s;
+        }
+        .back-link:hover { color: var(--blue-light); }
+        .back-link svg { width: 16px; height: 16px; }
+        .article-label {
+            display: inline-block;
+            color: var(--blue);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 1.5rem;
+        }
+        .article-header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 4.5vw, 3rem);
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        .article-subtitle {
+            font-size: 1.15rem;
+            color: var(--slate);
+            font-style: italic;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(148, 163, 184, 0.15);
+        }
+        .article-author {
+            font-weight: 600;
+            color: var(--white);
+            font-size: 0.95rem;
+        }
+        .article-byline {
+            color: var(--slate);
+            font-size: 0.85rem;
+        }
+
+        /* Article body */
+        .article-body {
+            padding: 3rem 0 6rem;
+        }
+        .article-body .container {
+            max-width: 800px;
+        }
+        .article-content p {
+            color: var(--slate);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.75rem;
+        }
+        .article-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.75rem;
+            font-weight: 500;
+            color: var(--white);
+            margin-top: 3rem;
+            margin-bottom: 1.25rem;
+        }
+        .article-content .lead-paragraph {
+            font-size: 1.15rem;
+            color: var(--white);
+            opacity: 0.9;
+        }
+
+        /* Pull quote */
+        .pull-quote {
+            margin: 2.5rem 0;
+            padding: 2rem 0 2rem 2rem;
+            border-left: 3px solid var(--blue);
+        }
+        .pull-quote p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            font-style: italic;
+            color: var(--white);
+            line-height: 1.5;
+            margin-bottom: 0 !important;
+        }
+
+        /* Author card */
+        .author-card {
+            margin-top: 4rem;
+            padding: 2rem;
+            background: var(--navy-light);
+            border-radius: 8px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+        .author-card-content {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+        .author-card-avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        .author-card-text h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        .author-card-text p {
+            color: var(--slate);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 0 !important;
+        }
+        .author-card-text a {
+            color: var(--blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .author-card-text a:hover { color: var(--blue-light); }
+
+        /* CTA section */
+        .article-cta {
+            padding: 4rem 0;
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+            text-align: center;
+        }
+        .article-cta .container {
+            max-width: 600px;
+        }
+        .article-cta h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .article-cta p {
+            color: var(--slate);
+            margin-bottom: 2rem;
+        }
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--blue);
+            color: var(--white);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        .cta-button:hover { background: var(--blue-light); transform: translateY(-2px); }
+        .cta-button svg { width: 20px; height: 20px; }
+
+        footer { padding: 2rem 0; border-top: 1px solid rgba(148, 163, 184, 0.1); text-align: center; }
+        footer p { color: var(--slate); font-size: 0.85rem; }
+
+        @media (max-width: 968px) {
+            .nav-links { display: none; }
+            .article-header { padding: 8rem 0 2rem; }
+        }
+        @media (max-width: 640px) {
+            .article-content h2 { font-size: 1.5rem; }
+            .pull-quote p { font-size: 1.25rem; }
+            .author-card-content { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo"><img src="../stratus-logo-dark.png" alt="Stratus Systems" class="logo-img"></a>
+            <ul class="nav-links">
+                <li><a href="/#track-record">Track Record</a></li>
+                <li><a href="/#insights" class="active">Insights</a></li>
+                <li><a href="/#how-i-work">How I Work</a></li>
+                <li><a href="/#services">Working Together</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article>
+        <header class="article-header">
+            <div class="container">
+                <a href="/#insights" class="back-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+                    </svg>
+                    Back to homepage
+                </a>
+                <span class="article-label">Insight</span>
+                <h1>The Hardest Call a Leader Makes Isn't How to Fix Things &mdash; It's Knowing When to Stop</h1>
+                <p class="article-subtitle">A case study in turning around an IoT platform &mdash; and knowing when to protect capital instead of chasing growth.</p>
+                <div class="article-meta">
+                    <span class="article-author">Simon Gadd</span>
+                    <span class="article-byline">Stratus Systems</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="article-body">
+            <div class="container">
+                <div class="article-content">
+
+                    <p class="lead-paragraph">I took on the role of MD for an IoT connectivity management platform division within a telecoms software business. The brief was straightforward: turn it around and make it a success.</p>
+
+                    <p>On day one, I sat in a meeting with the anchor customer. They were frustrated &mdash; delivery was slow, quality was poor, and confidence was draining fast. It was clear that without a significant change in leadership and direction, the relationship was at risk.</p>
+
+                    <p>The diagnosis was almost immediate. My predecessor had been stretched across multiple products. This platform had never had anyone's full attention. The offshore development team were talented but had been conditioned to execute without questioning. If they could see that a feature wouldn't work, they'd build it anyway &mdash; because that's what they'd been asked to do. Teams were siloed. Front-end didn't talk to back-end. Nobody was talking to CX. People were working through Jira tickets with blinkers on.</p>
+
+                    <h2>Fixing the Engine</h2>
+
+                    <p>I made the platform my sole focus. I visited the development team quarterly and ran regular stand-ups, sprint planning, and retrospectives remotely between visits. I worked with a project manager to introduce proper agile discipline. But the real shift was cultural. I needed the developers to challenge decisions, flag problems early, and talk to each other across disciplines. It took time, but once they had permission to think (and saw that speaking up was rewarded, not punished) the transformation was remarkable.</p>
+
+                    <p>Early on, I also had to make a call on team structure. There was an option to bring development onshore using existing staff from another part of the business. I assessed both teams and concluded the offshore team could deliver what we needed. That decision kept good people in jobs and avoided unnecessary cost.</p>
+
+                    <div class="pull-quote">
+                        <p>Once they had permission to think &mdash; and saw that speaking up was rewarded, not punished &mdash; the transformation was remarkable.</p>
+                    </div>
+
+                    <p>Within months, customer confidence was restored. They'd seen better delivery cadence, improved quality, a clear product roadmap, and someone accountable leading it. That trust translated into a renewed contract: a multi-year commitment at significantly increased terms.</p>
+
+                    <h2>Finding the Ceiling</h2>
+
+                    <p>With the anchor customer secured, I turned to building a broader pipeline. I partnered with a senior colleague on trips across multiple regions, initiating exploratory conversations with MNOs. We found genuine opportunities &mdash; operators without a platform who were actively looking for one.</p>
+
+                    <p>But I'd spent over two decades in telecoms software. I'd designed and built products that were successfully sold to multiple Tier-1 operators. And I could see what the leadership didn't want to hear: the addressable market was limited. Most MNOs of scale had either built their own platform or were locked into solutions from the major vendors. The greenfield opportunities were real but thin, and the sales cycles were long.</p>
+
+                    <h2>The Decision That Made Me Redundant</h2>
+
+                    <p>The original business plan was ambitious. It projected significant customer acquisition and budgeted for dedicated sales, R&amp;D, HR, and marketing functions to support that growth.</p>
+
+                    <p>I recommended delaying those hires until we'd proven the model and the market. I covered the product owner, commercial, and strategic roles myself rather than filling them as separate headcount. When the pipeline work confirmed my suspicion that the market was largely spoken for, I was already planning what a lean support structure would look like for the anchor customer.</p>
+
+                    <p>When leadership reached the same conclusion &mdash; that the window for this product had largely closed &mdash; the division moved to a support-only model. The development team was scaled back significantly. Developers were redeployed to other projects within the business. And the substantial investment that the business plan had called for was avoided entirely.</p>
+
+                    <div class="pull-quote">
+                        <p>I'd effectively made myself redundant by doing the right thing.</p>
+                    </div>
+
+                    <h2>The Point</h2>
+
+                    <p>In a permanent leadership role, there are natural incentives to keep building, keep hiring, keep investing. Career progression, team size, and organisational influence all reward growth &mdash; regardless of whether the market supports it.</p>
+
+                    <p>What I've taken from this experience is the value of a different mindset. One where the job is to give the business the truth and act on it &mdash; even when the truth is &ldquo;stop.&rdquo; I turned the product around, secured the anchor customer on significantly better terms, and then protected the business from investing heavily into a market that wasn't ready to buy.</p>
+
+                    <p>That's the approach I now bring to every engagement. Not just fixing what's broken &mdash; but having no institutional reason to pretend things are better than they are.</p>
+
+                </div>
+
+                <div class="author-card">
+                    <div class="author-card-content">
+                        <img src="../headshot.jpg" alt="Simon Gadd" class="author-card-avatar">
+                        <div class="author-card-text">
+                            <h3>Simon Gadd</h3>
+                            <p>Simon is an interim MD and fractional CPTO specialising in telecoms and IoT transformations. He works with PE/VC-backed businesses and scale-ups through <a href="/">Stratus Systems</a>.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </article>
+
+    <section class="article-cta">
+        <div class="container">
+            <h2>Facing a similar situation?</h2>
+            <p>Whether it's a turnaround, a scale-up, or an honest assessment of where things stand &mdash; I'd welcome a conversation.</p>
+            <a href="/#contact" class="cta-button">
+                Let's talk
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Stratus Systems Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
