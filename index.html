@@ -176,7 +176,6 @@
         }
         .outcome-label { color: var(--slate); font-size: 0.8rem; margin-top: 0.25rem; }
 
-        /* Logo Bar */
         .logo-bar {
             padding: 4rem 0;
             background: var(--navy-light);
@@ -204,7 +203,6 @@
             opacity: 1;
         }
 
-        /* Testimonials */
         .testimonials { padding: 6rem 0; }
         .testimonials-container { max-width: 800px; margin: 0 auto; text-align: center; }
         .testimonial-slider { position: relative; min-height: 300px; margin-top: 3rem; }
@@ -247,6 +245,50 @@
         }
         .testimonial-dot.active { opacity: 1; background: var(--blue); }
         .testimonial-dot:hover { opacity: 0.7; }
+
+        /* INSIGHTS SECTION */
+        .insights {
+            padding: 5rem 0;
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+        }
+        .insight-card {
+            max-width: 700px;
+            display: block;
+            text-decoration: none;
+            padding: 2.5rem;
+            background: var(--navy-light);
+            border-radius: 8px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            transition: all 0.3s;
+        }
+        .insight-card:hover {
+            border-color: var(--blue);
+            transform: translateY(-4px);
+        }
+        .insight-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--white);
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+        .insight-card p {
+            color: var(--slate);
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+        }
+        .insight-card .read-more {
+            color: var(--blue);
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s;
+        }
+        .insight-card:hover .read-more { color: var(--blue-light); }
+        .insight-card .read-more svg { width: 16px; height: 16px; }
 
         .how-i-work { padding: 6rem 0; border-top: 1px solid rgba(148, 163, 184, 0.1); }
         .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem; }
@@ -376,6 +418,7 @@
             <a href="#" class="logo"><img src="stratus-logo-dark.png" alt="Stratus Systems" class="logo-img"></a>
             <ul class="nav-links">
                 <li><a href="#track-record">Track Record</a></li>
+                <li><a href="#insights">Insights</a></li>
                 <li><a href="#how-i-work">How I Work</a></li>
                 <li><a href="#services">Working Together</a></li>
                 <li><a href="#expertise">Expertise</a></li>
@@ -458,7 +501,6 @@
         </div>
     </section>
 
-    <!-- LOGO BAR -->
     <section class="logo-bar">
         <div class="container">
             <p class="section-label">Experience delivering for</p>
@@ -473,7 +515,6 @@
         </div>
     </section>
 
-    <!-- TESTIMONIALS - moved up, expanded to 7 -->
     <section class="testimonials">
         <div class="container">
             <div class="testimonials-container">
@@ -525,6 +566,26 @@
                     <button class="testimonial-dot" data-index="5" aria-label="Testimonial 6"></button>
                     <button class="testimonial-dot" data-index="6" aria-label="Testimonial 7"></button>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSIGHTS SECTION - NEW -->
+    <section class="insights" id="insights">
+        <div class="container">
+            <span class="section-label">Insights</span>
+            <h2 class="section-title">From the field</h2>
+            <div style="margin-top: 2rem;">
+                <a href="insights/turnaround-knowing-when-to-stop.html" class="insight-card">
+                    <h3>The Hardest Call a Leader Makes Isn't How to Fix Things &mdash; It's Knowing When to Stop</h3>
+                    <p>A case study in turning around an IoT platform &mdash; and knowing when to protect capital instead of chasing growth.</p>
+                    <span class="read-more">
+                        Read more
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </span>
+                </a>
             </div>
         </div>
     </section>
